@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title> Search </title>
+        <link href="afterSearch.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;1,200&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="nav-background">
+            <div id="nav-container">
+              <header id="nav-header">
+                <h1><a href="#" id="nav-logo">Ivy</a></h1>
+                <div id="nav-menu-button">MENU</div>
+              </header>
+              <nav>
+                <ul class="nav-ul hide-ul">
+                    <li><a class="nav-link active-link" href="search.html">Search</a></li>
+                    <li><a class="nav-link active-link" href="skinQuiz.html">Skin care Quiz</a></li>
+                    <li><a class="nav-link active-link" href="#about">About</a></li>
+                    <li><a class="nav-link" href="#contact">Contact</a></li>
+                    <li><a class="nav-link" href="#">Login</a></li>
+                    <li><a class="nav-link" href="#">Sign up</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <script src="nav.js"></script>
+
+        <div class="header">
+            <form action="afterSearch.html" onsubmit="return SearchFunction()">
+                <h1> Find any style you want </h1>
+                <div class="form-box">
+                    <input type="text" class="search-field" id="searchText" placeholder="Makeup, color, skin type..."/>
+                    <button class="search-button" type="submit"> Search </button>
+                </div>
+            </form>
+        </div>
+        <div class="search-result-content">
+            <form>
+                <div class="result-header">
+                    <h1> Search results </h1>
+                </div>
+                <div class="search-results">
+                    <img class="articole" src="image/demoArticol1.png">
+                    <img class="articole" src="image/demoArticol2.png">
+                </div>
+            </form>
+        </div>
+        
+        <script>
+            function SearchFunction() {
+                var searchText = document.getElementById("searchText").value;
+                submitOK = "true";
+                if (searchText.length < 2) {
+                    alert("Nothing matches.");
+                    submitOK = "false";
+                } 
+                if (submitOK == "false") {
+                    return false;
+                }
+            }
+        </script>
+
+    </body>
+</html>
+
