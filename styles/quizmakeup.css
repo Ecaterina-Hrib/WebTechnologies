@@ -1,0 +1,928 @@
+
+body::-webkit-scrollbar {
+    width: 10px;               
+    
+}
+
+body::-webkit-scrollbar-track {
+    background: #6D6875;        
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #FEEAFA;    
+    border-radius: 30px;      
+    border: 3px solid #6D6875;
+}
+#nav-container > nav > ul {
+  list-style-type: none;
+}
+
+/* NAVIGATION */
+#nav-background {
+  position: fixed;
+  top: 0;
+  z-index: 9000;
+  width: 100%;
+  background-color: transparent;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+}
+
+#nav-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-family: 'Nunito', sans-serif;
+}
+
+#nav-header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+#nav-logo {
+  color: rgb(196, 161, 161);
+  text-decoration: none;
+}
+#nav-logo:hover {
+  color: #666;
+}
+.nav-ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1000em;
+}
+
+.nav-ul > li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav-link {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  color: rgb(255, 239, 239);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
+.customize {
+  font-size: 1.2em;
+  outline: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  -webkit-box-flex: 3;
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  padding: 16px 12px;
+  color: rgb(255, 239, 239);
+  text-decoration: none;
+  font-weight: 600;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  font-family: 'Nunito',sans-serif;
+}
+
+
+.customize:hover {
+  background-color: #b796dd83;
+}
+
+.nav-link:hover {
+  background-color: #b796dd83;
+}
+.mySlides {display: none}
+
+.text-slides {
+  color: #f2f2f2;
+  font-size: 2vh;
+  padding: 8px 12px;
+  position: absolute;
+  top:10vh;
+  left:150vh;
+  width: 100%;
+  text-align: top;
+}
+
+/* END NAVIGATION */
+
+
+
+#customize-form
+{
+    display: none;
+}
+
+.full-page
+{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to left,#685475, #6D6875, #8E9AAF, #CBC0D3, #EFD3D7,#CBC0D3, #8E9AAF,#6D6875,#685475);
+    background-size: cover;
+    background-position: center;
+	position: absolute;
+}
+
+.form-box
+{
+    top:10em;
+    width:43.75em;
+	height:49.75em;;
+	position:relative;
+    top: 6em;
+	margin:2% auto;
+	background:rgba(0,0,0,0.3);
+	padding:0.05em;
+    overflow: hidden;
+}
+.titlu {
+    display: block;
+    font-size: 3em;
+    padding: 0.5em 3em;
+    margin: 2em 4em;
+    margin-block-start: 0.43em;
+    margin-block-end: 0.43em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    font-family: 'Nunito',sans-serif;
+    color: aliceblue;
+    
+}
+h2{
+    display: block;
+    font-size: 1.5em;
+    padding: 0.5em 1.2em;
+    margin: 2em 4em;
+    margin-block-start: 0.43em;
+    margin-block-end: 0.43em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    font-family: 'Nunito',sans-serif;
+    color: aliceblue;
+    
+}
+
+.btn25{
+    
+    margin: 1em 5em;
+    width:5em;
+    height: 5em;
+    font-weight: bold;
+    font-family: 'Nunito',sans-serif;
+    text-align: center;
+    position: relative;
+    background: url(polka.jpg);
+    background-size: cover;
+    border:none;
+    box-shadow: 0.1em 0.1em 1em 0.111em #EFD3D7;
+	border-radius: 1.875em;
+}
+.btn35{
+    
+    
+    margin: 1em 3em;
+    width:5em;
+    height: 5em;
+    font-weight: bold;
+    font-family: 'Nunito',sans-serif;
+    text-align: center;
+    position: relative;
+    background: url(polka.jpg);
+    background-size: cover;
+    border:none;
+    box-shadow: 0.1em 0.1em 1em 0.111em #EFD3D7;
+	border-radius: 1.875em;
+
+}
+.btn45{
+    
+    
+    margin: 1em 3em;
+    width:5em;
+    height: 5em;
+    font-weight: bold;
+    font-family: 'Nunito',sans-serif;
+    text-align: center;
+    position: relative;
+    background: url(polka.jpg);
+    background-size: cover;
+    border:none;
+    box-shadow: 0.1em 0.1em 1em 0.111em #EFD3D7;
+	border-radius: 1.875em;
+
+}
+.btn55{
+    
+    
+    margin: 1em 3em;
+    width:5em;
+    height: 5em;
+    font-weight: bold;
+    font-family: 'Nunito',sans-serif;
+    text-align: center;
+    position: relative;
+    background: url(polka.jpg);
+    background-size: cover;
+    border:none;
+    box-shadow: 0.1em 0.1em 1em 0.111em #EFD3D7;
+	border-radius: 1.875em;
+
+}
+
+.buttongala{
+    
+    
+    margin: 1em 15em;
+    width:5em;
+    height: 5em;
+    font-weight: bold;
+    font-family: 'Nunito',sans-serif;
+    text-align: center;
+    position: relative;
+    background: url(gala.png);
+    background-size: cover;
+    border:none;
+    box-shadow: 0.1em 0.1em 1em 0.111em #EFD3D7;
+	border-radius: 1.875em;
+
+}
+.buttondaily{
+    
+    
+    margin: 1em 3em;
+    width:5em;
+    height: 5em;
+    font-weight: bold;
+    font-family: 'Nunito',sans-serif;
+    text-align: center;
+    position: relative;
+    background: url(daily.jpg);
+    background-size: cover;
+    border:none;
+    box-shadow: 0.1em 0.1em 1em 0.111em #EFD3D7;
+	border-radius: 1.875em;
+
+}
+.buttondry{
+    
+    
+    margin: 1em 8em;
+    width:5em;
+    height: 5em;
+    font-weight:bold;
+    font-family: 'Nunito',sans-serif;
+    text-align: center;
+    position: relative;
+    background: url(ccts.png);
+    background-size: cover;
+    border:none;
+    box-shadow: 0.0em 0.1em 1em 0.111em #EFD3D7;
+	border-radius: 1.875em;
+
+}
+.buttonbal{
+    
+    
+    margin: 1em 1em;
+    width:5em;
+    height: 5em;
+    font-weight: bold;
+    font-family: 'Nunito',sans-serif;
+    text-align: center;
+    position: relative;
+    background-color: gainsboro;
+    background: url(bal.png);
+    background-size: cover;
+    border:none;
+    box-shadow: 0.01em 0.1em 1em 0.111em #EFD3D7;
+	border-radius: 1.875em;
+
+}
+.buttonoily{
+    
+    
+    margin: 1em 8em;
+    width:5em;
+    height: 5em;
+    font-weight: bold;
+    font-family: 'Nunito',sans-serif;
+    
+    text-align: center;
+    position: relative;
+    background-color: gainsboro;
+    background: url(wtr.png);
+    background-size:cover;
+    border:none;
+    box-shadow: 0.01em 0.1em 1em 0.111em #EFD3D7;
+	border-radius: 1.875em;
+
+}
+.submit-btn{
+    top:3em;
+  margin: 1em 36em;
+    width:8.5em;
+    height: 3em;
+    font-weight: bold;
+    font-family: 'Nunito',sans-serif;
+    
+    text-align: center;
+    position: relative;
+    background-color: gainsboro;
+    
+    background-size:cover;
+    border:none;
+    box-shadow: 0.01em 0.1em 1em 0.111em #EFD3D7;
+	border-radius: 1.875em;   
+ 
+}
+/* DESKTOP MENU */
+@media screen and (min-width: 701px) {
+
+  #nav-menu-button {
+    display: none;
+  }
+
+  .nav-link {
+    flex-basis: auto;
+    padding: 1rem 1.5rem;
+  }
+}
+
+/* This moves the logo so that it's not touching the left side */
+@media screen and (max-width: 1040px) {
+  #nav-logo {
+    margin-left: 1rem;
+  }
+}
+/* END DESKTOP MENU */
+
+/* MOBILE MENU */
+@media screen and (max-width: 480px) {
+
+
+.full-page
+{
+    height: 300%;
+    width: 300%;
+   background: linear-gradient(to left,#685475, #6D6875, #8E9AAF, #CBC0D3, #EFD3D7,#CBC0D3, #8E9AAF,#6D6875,#685475);
+    background-size: cover;
+    background-position: center;
+	position: absolute;
+}
+
+    
+  #nav-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #nav-menu-button {
+    padding: 0.5rem;
+    background-color: #d09be9;
+    cursor: pointer;
+  }
+
+  .nav-ul {
+    display: block;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    overflow: auto;
+    direction: rtl;
+    transition: max-height 400ms;
+    max-height: 34em;
+  }
+
+  .hide-ul {
+    max-height: 0;
+  }
+
+    .customize {
+        flex-basis: auto;
+    padding: 1rem 1.5rem;
+        border-bottom: 1px solid #ffe4e4;
+    }
+  .nav-link {
+    padding: 1rem 0;
+    font-size: 1.3rem;
+    border-bottom: 1px solid #ffe4e4;
+  }
+   
+ .form-box
+{
+    top:10em;
+    width:43.75em;
+	height:85.75em;;
+	position:relative;
+    top: 6em;
+	margin:2% auto;
+	background:rgba(0,0,0,0.3);
+	padding:0.05em;
+    overflow: hidden;
+}    
+    
+h2{
+    display: block;
+    font-size: 3em;
+    padding: 0.5em 1.2em;
+    margin: 2em 4em;
+    margin-block-start: 0.43em;
+    margin-block-end: 0.43em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    font-family: 'Nunito',sans-serif;
+    color: aliceblue;
+    
+}
+
+.btn25{
+    
+    margin: 0.5em 0.5em;
+    width:6em;
+    height: 6em;
+    font-size: 1.55em;
+    font-weight: bold;
+    font-family: 'Nunito',sans-serif;
+    text-align: center;
+    position: relative;
+    background: url(polka.jpg);
+    background-size: cover;
+    border:none;
+    box-shadow: 0.1em 0.1em 1em 0.111em #EFD3D7;
+	border-radius: 1.875em;
+}
+.btn35{
+    
+    
+    margin: 0.5em 0.5em;
+    width:6em;
+    height: 6em;
+    font-size: 1.55em;
+    font-weight: bold;
+    font-family: 'Nunito',sans-serif;
+    text-align: center;
+    position: relative;
+    background: url(polka.jpg);
+    background-size: cover;
+    border:none;
+    box-shadow: 0.1em 0.1em 1em 0.111em #EFD3D7;
+	border-radius: 1.875em;
+
+}
+.btn45{
+    
+    
+    margin: 0.5em 0.5em;
+    width:6em;
+    height: 6em;
+    font-size: 1.55em;
+    font-weight: bold;
+    font-family: 'Nunito',sans-serif;
+    text-align: center;
+    position: relative;
+    background: url(polka.jpg);
+    background-size: cover;
+    border:none;
+    box-shadow: 0.1em 0.1em 1em 0.111em #EFD3D7;
+	border-radius: 1.875em;
+
+}
+.btn55{
+    
+    
+    margin: 0.5em 0em;
+    width:6em;
+    height: 6em;
+    font-size: 1.55em;
+    font-weight: bold;
+    font-family: 'Nunito',sans-serif;
+    text-align: center;
+    position: relative;
+    background: url(polka.jpg);
+    background-size: cover;
+    border:none;
+    box-shadow: 0.1em 0.1em 1em 0.111em #EFD3D7;
+	border-radius: 1.875em;
+
+}
+
+.buttongala{
+    
+    
+    margin: 1em 4em;
+    width:6em;
+    height: 6em;
+    font-size: 1.55em;
+    font-weight: bold;
+    font-family: 'Nunito',sans-serif;
+    text-align: center;
+    position: relative;
+    background: url(gala.png);
+    background-size: cover;
+    border:none;
+    box-shadow: 0.1em 0.1em 1em 0.111em #EFD3D7;
+	border-radius: 1.875em;
+
+}
+.buttondaily{
+    
+    
+    margin: 1em 3em;
+    width:6em;
+    height: 6em;
+    font-size: 1.55em;
+    font-weight: bold;
+    font-family: 'Nunito',sans-serif;
+    text-align: center;
+    position: relative;
+    background: url(daily.jpg);
+    background-size: cover;
+    border:none;
+    box-shadow: 0.1em 0.1em 1em 0.111em #EFD3D7;
+	border-radius: 1.875em;
+
+}
+.buttondry{
+    
+    
+    margin: 1em 2em;
+    width:6em;
+    height: 6em;
+    font-size: 1.55em;
+    font-weight:bold;
+    font-family: 'Nunito',sans-serif;
+    text-align: center;
+    position: relative;
+    background: url(ccts.png);
+    background-size: cover;
+    border:none;
+    box-shadow: 0.0em 0.1em 1em 0.111em #EFD3D7;
+	border-radius: 1.875em;
+
+}
+.buttonbal{
+    
+    
+    margin: 1em 0.5em;
+    width:6em;
+    height: 6em;
+    font-size: 1.55em;
+    font-weight: bold;
+    font-family: 'Nunito',sans-serif;
+    text-align: center;
+    position: relative;
+    background-color: gainsboro;
+    background: url(bal.png);
+    background-size: cover;
+    border:none;
+    box-shadow: 0.01em 0.1em 1em 0.111em #EFD3D7;
+	border-radius: 1.875em;
+
+}
+.buttonoily{
+    
+    
+    margin: 1em 2em;
+    width:6em;
+    height: 6em;
+    font-size: 1.55em;
+    font-weight: bold;
+    font-family: 'Nunito',sans-serif;
+    
+    text-align: center;
+    position: relative;
+    background-color: gainsboro;
+    background: url(wtr.png);
+    background-size:cover;
+    border:none;
+    box-shadow: 0.01em 0.1em 1em 0.111em #EFD3D7;
+	border-radius: 1.875em;
+
+}
+.submit-btn{
+    top:1em;
+  margin:0em 15em;
+    width: 5em;
+    height: 2.6em;
+    font-weight: bold;
+    font-family: 'Nunito',sans-serif;
+    font-size: 1.9em;
+    text-align: center;
+    position: relative;
+    background-color: gainsboro;
+    
+    background-size:cover;
+    border:none;
+    box-shadow: 0.01em 0.1em 1em 0.111em #EFD3D7;
+	border-radius: 1.875em;   
+ 
+}
+}
+
+/* MOBILE MENU BIG */
+@media screen and (min-width:480px) and (max-width: 700px) {
+
+.full-page
+{
+    height: 200%;
+    width: 200%;
+    background: linear-gradient(to left,#685475, #6D6875, #8E9AAF, #CBC0D3, #EFD3D7,#CBC0D3, #8E9AAF,#6D6875,#685475);
+    background-size: cover;
+    background-position: center;
+	position: absolute;
+}
+
+  #nav-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #nav-menu-button {
+    padding: 1em;
+    background-color: #d09be9;
+      font-size: 2em;
+    cursor: pointer;
+  }
+
+  .nav-ul {
+    display: block;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    overflow: auto;
+    direction: rtl;
+    transition: max-height 500ms;
+    max-height: 90em;
+  }
+
+  .hide-ul {
+    max-height: 0;
+  }
+
+    .customize {
+        flex-basis: auto;
+    padding: 2rem 4em;
+        font-size: 3em;
+        border-bottom: 1px solid #ffe4e4;
+    }
+  .nav-link {
+    padding: 2rem 4em;
+    font-size: 4em;
+    border-bottom: 1px solid #ffe4e4;
+  }
+    .form-box
+{
+    
+    width:43.75em;
+	height:80.75em;;
+	position:relative;
+    top: 10em;
+	margin:2% auto;
+	background:rgba(0,0,0,0.3);
+	padding:0.05em;
+    overflow: hidden;
+}    
+    
+h2{
+    display: block;
+    font-size: 3em;
+    padding: 0.5em 1.2em;
+    margin: 2em 4em;
+    margin-block-start: 0.43em;
+    margin-block-end: 0.43em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    font-family: 'Nunito',sans-serif;
+    color: aliceblue;
+    
+}
+
+    
+.btn25{
+    
+    margin: 1em 1em;
+    width:5em;
+    height: 5em;
+    font-size: 1.55em;
+    font-weight: bold;
+    font-family: 'Nunito',sans-serif;
+    text-align: center;
+    position: relative;
+    background: url(polka.jpg);
+    background-size: cover;
+    border:none;
+    box-shadow: 0.1em 0.1em 1em 0.111em #EFD3D7;
+	border-radius: 1.875em;
+}
+.btn35{
+    
+    
+    margin: 1em 1em;
+    width:5em;
+    height: 5em;
+    font-size: 1.55em;
+    font-weight: bold;
+    font-family: 'Nunito',sans-serif;
+    text-align: center;
+    position: relative;
+    background: url(polka.jpg);
+    background-size: cover;
+    border:none;
+    box-shadow: 0.1em 0.1em 1em 0.111em #EFD3D7;
+	border-radius: 1.875em;
+
+}
+.btn45{
+    
+    
+    margin: 1em 1em;
+    width:5em;
+    height: 5em;
+    font-size: 1.55em;
+    font-weight: bold;
+    font-family: 'Nunito',sans-serif;
+    text-align: center;
+    position: relative;
+    background: url(polka.jpg);
+    background-size: cover;
+    border:none;
+    box-shadow: 0.1em 0.1em 1em 0.111em #EFD3D7;
+	border-radius: 1.875em;
+
+}
+.btn55{
+    
+    
+    margin: 1em 0.6em;
+    width:5em;
+    height: 5em;
+    font-size: 1.55em;
+    font-weight: bold;
+    font-family: 'Nunito',sans-serif;
+    text-align: center;
+    position: relative;
+    background: url(polka.jpg);
+    background-size: cover;
+    border:none;
+    box-shadow: 0.1em 0.1em 1em 0.111em #EFD3D7;
+	border-radius: 1.875em;
+
+}
+
+.buttongala{
+    
+    
+    margin: 1em 5em;
+    width:5em;
+    height: 5em;
+    font-size: 1.55em;
+    font-weight: bold;
+    font-family: 'Nunito',sans-serif;
+    text-align: center;
+    position: relative;
+    background: url(gala.png);
+    background-size: cover;
+    border:none;
+    box-shadow: 0.1em 0.1em 1em 0.111em #EFD3D7;
+	border-radius: 1.875em;
+
+}
+.buttondaily{
+    
+    
+    margin: 1em 3em;
+    width:5em;
+    height: 5em;
+    font-size: 1.55em;
+    font-weight: bold;
+    font-family: 'Nunito',sans-serif;
+    text-align: center;
+    position: relative;
+    background: url(daily.jpg);
+    background-size: cover;
+    border:none;
+    box-shadow: 0.1em 0.1em 1em 0.111em #EFD3D7;
+	border-radius: 1.875em;
+
+}
+.buttondry{
+    
+    
+    margin: 1em 3em;
+    width:5em;
+    height: 5em;
+    font-size: 1.55em;
+    font-weight:bold;
+    font-family: 'Nunito',sans-serif;
+    text-align: center;
+    position: relative;
+    background: url(ccts.png);
+    background-size: cover;
+    border:none;
+    box-shadow: 0.0em 0.1em 1em 0.111em #EFD3D7;
+	border-radius: 1.875em;
+
+}
+.buttonbal{
+    
+    
+    margin: 1em 1em;
+    width:5em;
+    height: 5em;
+    font-size: 1.55em;
+    font-weight: bold;
+    font-family: 'Nunito',sans-serif;
+    text-align: center;
+    position: relative;
+    background-color: gainsboro;
+    background: url(bal.png);
+    background-size: cover;
+    border:none;
+    box-shadow: 0.01em 0.1em 1em 0.111em #EFD3D7;
+	border-radius: 1.875em;
+
+}
+.buttonoily{
+    
+    
+    margin: 1em 2em;
+    width:5em;
+    height: 5em;
+    font-size: 1.55em;
+    font-weight: bold;
+    font-family: 'Nunito',sans-serif;
+    
+    text-align: center;
+    position: relative;
+    background-color: gainsboro;
+    background: url(wtr.png);
+    background-size:cover;
+    border:none;
+    box-shadow: 0.01em 0.1em 1em 0.111em #EFD3D7;
+	border-radius: 1.875em;
+
+}
+.submit-btn{
+    top:2em;
+  margin:0em 15em;
+    width: 5em;
+    height: 2.6em;
+    font-weight: bold;
+    font-family: 'Nunito',sans-serif;
+    font-size: 1.9em;
+    text-align: center;
+    position: relative;
+    background-color: gainsboro;
+    
+    background-size:cover;
+    border:none;
+    box-shadow: 0.01em 0.1em 1em 0.111em #EFD3D7;
+	border-radius: 1.875em;   
+ 
+}
+   
+}
