@@ -219,6 +219,7 @@ input[type=submit]:hover {
   background: rgb(0, 0, 0);
   border-radius: 3px;
   border-color: rgb(0, 0, 0);
+  color: white;
 }
 #nav-container > nav > ul {
   list-style-type: none;
