@@ -8,27 +8,30 @@
       <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;1,200&display=swap" rel="stylesheet">
   </head>
-
+<!----------Crearea navbar-ului-->
   <body >
       <div class="full-page">
-    <div id="nav-background">
-      <div id="nav-container">
-        <header id="nav-header">
-          <h1><a href="index.html" id="nav-logo">Ivy</a></h1>
-          <div id="nav-menu-button">MENU</div>
-        </header>
-        <nav>
-          <ul class="nav-ul hide-ul">
-            <li><a class="nav-link active-link" href="search.html">Search</a></li>
-            <li><a class="nav-link active-link" href="skinQuiz.html">Quiz</a></li>
-            <li><a class="nav-link" href="customize.html">Customize</a></li>
-            <li><a class='myaccount' href="#My_Account"  >My Account</a></li>
-            <li><a class="nav-link active-link" href="index.html">About Us</a></li>
-            <li><a class="nav-link" href="index.html">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
+        <div id="nav-background">
+          <div id="nav-container">
+            <header id="nav-header">
+              <h1><a class="nav-logo-function" href="index.html#home" id="nav-logo">Ivy</a></h1>
+              <div id="nav-menu-button">MENU</div>
+            </header>
+            <nav>
+              <ul class="nav-ul hide-ul">
+                <li><a class="nav-link" href="search.html">Search</a></li>
+                <li><a class="nav-link" href="skinQuiz.html">Quiz</a></li>
+                <li><a class="nav-link" href="customize.html">Customize</a></li>
+                <li><a class="nav-link" href="index.html#about">About Us</a></li>
+                <li><a class="nav-link" href="index.html#contact">Contact</a></li>
+                <li><a class="nav-link" href="Myaccount.html">Account</a></li>
+              
+                
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <script src="./scripts/nav.js"></script>
       <div id='myaccount-form'class='myaccount-page'>
            <!----creating the form box--->
             <div class="form-box">
@@ -37,7 +40,7 @@
                     <button type='button'onclick='account()'class='toggle-btn'>My Account </button>
                     <button type='button'onclick='passwd()'class='toggle-btn'>Change Password</button>
                 </div>
-                <!----creating login form--->
+                <!----creating MyAccount form--->
                 <form id='account' class='input-group-account'>
                     <h2>First name</h2>
                     <input type='text'class='input-field'value='Alexandra'>
@@ -50,7 +53,7 @@
                     <button type='submit'class='submit-btn'>Save</button>
 		  
 		 </form>
-                <!---- creating register form--->
+                <!---- creating Change password form--->
 	       <form id='passwd' class='input-group-passwd'>
 		     <input type='password'class='input-field-p'placeholder='Enter Actual Password' required>
              <input type='password'class='input-field-p'placeholder='Enter New Password' required>
@@ -58,7 +61,6 @@
                     <button type='submit'class='submit-btn-p'>Update</button>
             
 	         </form>
-                <!-----now let us style the form--->
             </div>
         </div>
       </div>
@@ -72,6 +74,7 @@
 
   navButton.onclick = toggleMobileMenu;
       </script>
+      <!----Exact ca la login, afisarea datelor pentru butoanele apasate("My account" unde vede datele scrise in register, "Change Password" unde poate schimba parola-->
       <script>
         var a = document.getElementById('myaccount-form').style.display='block';
         var x=document.getElementById('account');
