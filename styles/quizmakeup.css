@@ -13,10 +13,10 @@ body::-webkit-scrollbar-thumb {
     border-radius: 30px;      
     border: 3px solid #6D6875;
 }
+
 #nav-container > nav > ul {
   list-style-type: none;
 }
-
 /* NAVIGATION */
 #nav-background {
   position: fixed;
@@ -39,13 +39,10 @@ body::-webkit-scrollbar-thumb {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  font-family: 'Nunito', sans-serif;
 }
 
 #nav-header {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+ 
   display: flex;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
@@ -56,6 +53,8 @@ body::-webkit-scrollbar-thumb {
   -ms-flex-align: center;
   align-items: center;
 }
+
+
 
 #nav-logo {
   color: rgb(196, 161, 161);
@@ -69,7 +68,7 @@ body::-webkit-scrollbar-thumb {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  max-width: 1000em;
+  max-width: 700px;
 }
 
 .nav-ul > li {
@@ -92,47 +91,83 @@ body::-webkit-scrollbar-thumb {
   transition: 200ms;
 }
 
-.customize {
-  font-size: 1.2em;
-  outline: none;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  -webkit-box-flex: 3;
-  -webkit-flex: 3;
-  -ms-flex: 3;
-  flex: 3;
-  padding: 16px 12px;
-  color: rgb(255, 239, 239);
-  text-decoration: none;
-  font-weight: 600;
-  -webkit-transition: 200ms;
-  transition: 200ms;
-  font-family: 'Nunito',sans-serif;
-}
-
-
-.customize:hover {
-  background-color: #b796dd83;
-}
-
 .nav-link:hover {
   background-color: #b796dd83;
 }
-.mySlides {display: none}
 
-.text-slides {
-  color: #f2f2f2;
-  font-size: 2vh;
-  padding: 8px 12px;
-  position: absolute;
-  top:10vh;
-  left:150vh;
-  width: 100%;
-  text-align: top;
-}
 
 /* END NAVIGATION */
+
+
+/* MOBILE MENU */
+@media screen and (max-width: 700px) {
+ 
+
+.nav-link {
+  background-color: #6918c583;
+}
+.nav-link:hover {
+  background-color: #b796dd83;
+}
+  #nav-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #nav-menu-button {
+    padding: 1rem;
+    background-color: #d09be9;
+    cursor: pointer;
+  }
+
+  .nav-ul {
+    display: block;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    overflow: auto;
+    direction: rtl;
+    transition: max-height 400ms;
+    max-height: 80vh;
+  }
+
+  .hide-ul {
+    max-height: 0;
+  }
+
+  .nav-link {
+    padding: 1rem 0;
+    font-size: 1.3rem;
+    border-bottom: 1px solid #ffe4e4;
+  }
+
+
+}
+/* END MOBILE MENU */
+
+/* DESKTOP MENU */
+@media screen and (min-width: 701px) {
+
+  #nav-menu-button {
+    display: none;
+  }
+  .nav-link {
+    color :rgb(255, 255, 255); 
+    flex-basis: auto;
+    padding: 1rem 1.5rem;
+  }
+}
+
+body, p, h1, h2, h3, h4, ul, li {
+  margin: 0;
+  padding: 0;
+}
 
 
 
@@ -141,26 +176,31 @@ body::-webkit-scrollbar-thumb {
     display: none;
 }
 
+body{
+    display: block;
+    margin: 0;
+    font-family: 'Nunito',sans-serif;
+}
 .full-page
 {
-    height: 100vh;
+    height: 150vh;
     width: 100%;
     background: linear-gradient(to left,#685475, #6D6875, #8E9AAF, #CBC0D3, #EFD3D7,#CBC0D3, #8E9AAF,#6D6875,#685475);
     background-size: cover;
     background-position: center;
-	position: absolute;
+	  position: absolute;
 }
 
 .form-box
 {
-    top:10em;
+	padding:0.05em;
+   
     width:43.75em;
 	height:49.75em;;
 	position:relative;
     top: 6em;
 	margin:2% auto;
 	background:rgba(0,0,0,0.3);
-	padding:0.05em;
     overflow: hidden;
 }
 .titlu {
@@ -173,7 +213,7 @@ body::-webkit-scrollbar-thumb {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-weight: bold;
-    font-family: 'Nunito',sans-serif;
+    
     color: aliceblue;
     
 }
@@ -365,26 +405,6 @@ h2{
 	border-radius: 1.875em;   
  
 }
-/* DESKTOP MENU */
-@media screen and (min-width: 701px) {
-
-  #nav-menu-button {
-    display: none;
-  }
-
-  .nav-link {
-    flex-basis: auto;
-    padding: 1rem 1.5rem;
-  }
-}
-
-/* This moves the logo so that it's not touching the left side */
-@media screen and (max-width: 1040px) {
-  #nav-logo {
-    margin-left: 1rem;
-  }
-}
-/* END DESKTOP MENU */
 
 /* MOBILE MENU */
 @media screen and (max-width: 480px) {
@@ -400,49 +420,12 @@ h2{
 	position: absolute;
 }
 
-    
-  #nav-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    text-align: center;
-  }
-
-  #nav-menu-button {
-    padding: 0.5rem;
-    background-color: #d09be9;
-    cursor: pointer;
-  }
-
-  .nav-ul {
-    display: block;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    overflow: auto;
-    direction: rtl;
-    transition: max-height 400ms;
-    max-height: 34em;
-  }
-
-  .hide-ul {
-    max-height: 0;
-  }
-
+ 
     .customize {
         flex-basis: auto;
     padding: 1rem 1.5rem;
         border-bottom: 1px solid #ffe4e4;
     }
-  .nav-link {
-    padding: 1rem 0;
-    font-size: 1.3rem;
-    border-bottom: 1px solid #ffe4e4;
-  }
    
  .form-box
 {
@@ -453,7 +436,7 @@ h2{
     top: 6em;
 	margin:2% auto;
 	background:rgba(0,0,0,0.3);
-	padding:0.05em;
+	
     overflow: hidden;
 }    
     
@@ -669,38 +652,6 @@ h2{
 	position: absolute;
 }
 
-  #nav-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    text-align: center;
-  }
-
-  #nav-menu-button {
-    padding: 1em;
-    background-color: #d09be9;
-      font-size: 2em;
-    cursor: pointer;
-  }
-
-  .nav-ul {
-    display: block;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    overflow: auto;
-    direction: rtl;
-    transition: max-height 500ms;
-    max-height: 90em;
-  }
-
-  .hide-ul {
-    max-height: 0;
-  }
 
     .customize {
         flex-basis: auto;
@@ -708,11 +659,6 @@ h2{
         font-size: 3em;
         border-bottom: 1px solid #ffe4e4;
     }
-  .nav-link {
-    padding: 2rem 4em;
-    font-size: 4em;
-    border-bottom: 1px solid #ffe4e4;
-  }
     .form-box
 {
     
@@ -722,7 +668,7 @@ h2{
     top: 10em;
 	margin:2% auto;
 	background:rgba(0,0,0,0.3);
-	padding:0.05em;
+
     overflow: hidden;
 }    
     
