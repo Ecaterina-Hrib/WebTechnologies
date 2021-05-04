@@ -1,7 +1,19 @@
+body::-webkit-scrollbar {
+    width: 10px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: #6D6875;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #FEEAFA;    /* color of the scroll thumb */
+    border-radius: 30px;       /* roundness of the scroll thumb */
+    border: 3px solid #6D6875;  /* creates padding around scroll thumb */
+}
 #nav-container > nav > ul {
   list-style-type: none;
 }
-
 /* NAVIGATION */
 #nav-background {
   position: fixed;
@@ -24,13 +36,10 @@
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  font-family: 'Nunito', sans-serif;
 }
 
 #nav-header {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+ 
   display: flex;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
@@ -41,6 +50,8 @@
   -ms-flex-align: center;
   align-items: center;
 }
+
+
 
 #nav-logo {
   color: rgb(196, 161, 161);
@@ -63,24 +74,7 @@
   display: -ms-flexbox;
   display: flex;
 }
-.myaccount {
-  font-size: 1.2em;
-  outline: none;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  -webkit-box-flex: 3;
-  -webkit-flex: 3;
-  -ms-flex: 3;
-  flex: 3;
-    padding: 16px 12px;
-  color: rgb(255, 239, 239);
-  text-decoration: none;
-  font-weight: 600;
-  -webkit-transition: 200ms;
-  transition: 200ms;
-  font-family: 'Nunito',sans-serif;
-}
+
 .nav-link {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -93,31 +87,93 @@
   -webkit-transition: 200ms;
   transition: 200ms;
 }
-.myaccount:hover {
-  background-color: #b796dd83;
-}
+
 .nav-link:hover {
   background-color: #b796dd83;
 }
-.mySlides {display: none}
 
-.text-slides {
-  color: #f2f2f2;
-  font-size: 2vh;
-  padding: 8px 12px;
-  position: absolute;
-  top:10vh;
-  left:150vh;
-  width: 100%;
-  text-align: top;
-}
 
 /* END NAVIGATION */
 
 
+/* MOBILE MENU */
+@media screen and (max-width: 700px) {
+ 
+
+.nav-link {
+  background-color: #6918c583;
+}
+.nav-link:hover {
+  background-color: #b796dd83;
+}
+  #nav-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #nav-menu-button {
+    padding: 1rem;
+    background-color: #d09be9;
+    cursor: pointer;
+  }
+
+  .nav-ul {
+    display: block;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    overflow: auto;
+    direction: rtl;
+    transition: max-height 400ms;
+    max-height: 80vh;
+  }
+
+  .hide-ul {
+    max-height: 0;
+  }
+
+  .nav-link {
+    padding: 1rem 0;
+    font-size: 1.3rem;
+    border-bottom: 1px solid #ffe4e4;
+  }
+
+
+}
+/* END MOBILE MENU */
+
+/* DESKTOP MENU */
+@media screen and (min-width: 701px) {
+
+  #nav-menu-button {
+    display: none;
+  }
+  .nav-link {
+    color :rgb(255, 255, 255); 
+    flex-basis: auto;
+    padding: 1rem 1.5rem;
+  }
+}
+
+body, p, h1, h2, h3, h4, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  margin: 0;
+  font-family: 'Nunito',sans-serif;
+}
+
 .full-page
 {
-    height: 100vh;
+    height: 130vh;
     width: 100%;
     background: linear-gradient(to right,#685475, #6D6875, #8E9AAF, #CBC0D3, #EFD3D7);
     background-size: cover;
@@ -286,50 +342,13 @@ form#passwd {
 	position: absolute;
 }
 
-  #nav-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    text-align: center;
-  }
-
-  #nav-menu-button {
-    padding: 3rem;
-    background-color: #d09be9;
-      font-size: 2em;
-    cursor: pointer;
-  }
-
-  .nav-ul {
-    display: block;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    overflow: auto;
-    direction: rtl;
-    transition: max-height 500ms;
-    max-height: 100em;
-  }
-
-  .hide-ul {
-    max-height: 0;
-  }
-
+  
     .myaccount {
         flex-basis: auto;
     padding: 2rem 4em;
         font-size: 3em;
         border-bottom: 1px solid #ffe4e4;
     }
-  .nav-link {
-    padding: 2rem 4em;
-    font-size: 4em;
-    border-bottom: 1px solid #ffe4e4;
-  }
    
     
 .button-box
@@ -338,7 +357,7 @@ form#passwd {
 	margin:0em auto;
     top:3em;
 	position:relative;
-	
+	box-shadow: -1.8em 0.188em 1em 0.2em #EFD3D7;
 	border-radius: 1.875em;
 }
 .toggle-btn
@@ -356,8 +375,8 @@ form#passwd {
 {
 	top: 0;
 	position: absolute;
-	width: 14em;
-    margin: 0 2em;
+	width: 14.5em;
+    margin: 0 1.35em;
 	height: 100%;
 	background: #EFD3D7;
 	border-radius: 2.25em;
@@ -509,48 +528,14 @@ form#passwd {
 }
 
     
-  #nav-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    text-align: center;
-  }
-
-  #nav-menu-button {
-    padding: 0.5rem;
-    background-color: #d09be9;
-    cursor: pointer;
-  }
-
-  .nav-ul {
-    display: block;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    overflow: auto;
-    direction: rtl;
-    transition: max-height 400ms;
-    max-height: 34em;
-  }
-
-  .hide-ul {
-    max-height: 0;
-  }
+ 
 
     .myaccount {
         flex-basis: auto;
     padding: 1rem 1.5rem;
         border-bottom: 1px solid #ffe4e4;
     }
-  .nav-link {
-    padding: 1rem 0;
-    font-size: 1.3rem;
-    border-bottom: 1px solid #ffe4e4;
-  }
+  
     
     
     
@@ -714,25 +699,3 @@ form#passwd {
 }
     
 }
-/* END MOBILE MENU */
-
-/* DESKTOP MENU */
-@media screen and (min-width: 701px) {
-
-  #nav-menu-button {
-    display: none;
-  }
-
-  .nav-link {
-    flex-basis: auto;
-    padding: 1rem 1.5rem;
-  }
-}
-
-/* This moves the logo so that it's not touching the left side */
-@media screen and (max-width: 1040px) {
-  #nav-logo {
-    margin-left: 1rem;
-  }
-}
-/* END DESKTOP MENU */
