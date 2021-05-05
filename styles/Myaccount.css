@@ -211,11 +211,11 @@ h2 {
 }
 .button-box
 {
-	width: 18em;
+    
+	width: 16em;
 	margin:1.2em auto;
 	position:relative;
-	box-shadow: 0.75em 0.188em 1em 0.125em #EFD3D7;
-	border-radius: 1.875em;
+	
 }
 .toggle-btn
 {
@@ -226,12 +226,23 @@ h2 {
 	outline: none;
 	position: relative;
 }
+.toggle-btn1
+{
+	padding:1em 0em;
+    margin:0em 1.859em;
+    left:1em;
+	cursor:pointer;
+	background:transparent;
+    font-size: 0.7em;
+	border:0;
+	outline: none;
+	position: relative;
+}
 #btn
 {
 	top: 0;
-	left:-1em;
 	position: absolute;
-	width: 9.5em;
+	width: 8.7em;
 	height: 100%;
 	background: #EFD3D7;
 	border-radius: 6.25em;
@@ -253,7 +264,7 @@ h2 {
 }
 .input-field
 {
-	width: 200%;
+	width: 25em;
 	padding:1em 1em;
     color: aliceblue;
 	margin:5px 5em;
@@ -267,10 +278,10 @@ h2 {
 }
 .input-field-p
 {
-	width: 200%;
+	width: 25em;
 	padding:1em 1em;
     color: aliceblue;
-	margin:5px 5em;
+	margin:1em 2em;
 	border-left:0;
 	border-top:0;
 	border-right:0;
@@ -281,11 +292,12 @@ h2 {
 }
 .submit-btn
 {
-    width: 70%;
-	padding: 0.938em 3.25em;
+    width: 4em;
+	padding: 0.238em 0em;
 	cursor: pointer;
+    font-size: 1.5em;
 	display: block;
-	margin: 3em 35em;;
+	margin: 1.5em 9em;;
 	background: #EFD3D7;
 	border: 0;
     box-shadow: 0.75em 0.188em 1.25em 0.125em #EFD3D7;
@@ -295,30 +307,25 @@ h2 {
 
 .submit-btn-p
 {
-    width: 70%;
-	padding: 0.938em 0.25em;
+    width: 4em;
+	padding: 0.238em 0em;
 	cursor: pointer;
 	display: block;
-	margin: 3em 30em;;
+    font-size: 1.5em;
+	margin: 2em 9em;;
 	background: #EFD3D7;
 	border: 0;
     box-shadow: 0.75em 0.188em 1.25em 0.125em #EFD3D7;
 	outline: none;
 	border-radius: 1.875em;
 }
-#account
-{
-	left:4.25em;
-}
+
 #account input
 {
 	color:white;
 	font-size: 1.125em;
 }
-#passwd
-{
-	left:31.25em;
-}
+
 form#passwd {
     left: 49.75em;
 }
@@ -334,8 +341,8 @@ form#passwd {
 
 .full-page
 {
-    height: 200vh;
-    width: 200%;
+    height: 150vh;
+    width: 100%;
     background: linear-gradient(to right,#685475, #6D6875, #8E9AAF, #CBC0D3, #EFD3D7);
     background-size: cover;
     background-position: center;
@@ -353,30 +360,47 @@ form#passwd {
     
 .button-box
 {
-	width: 26.6em;
+	width: 14em;
 	margin:0em auto;
     top:3em;
+    box-shadow: 0em 0em 0em 0em #000000;
 	position:relative;
-	box-shadow: -1.8em 0.188em 1em 0.2em #EFD3D7;
-	border-radius: 1.875em;
+
 }
 .toggle-btn
 {
-	padding:1em 1.7em;
+	padding:0em 1.7em;
+    margin: 0em -0.5em;
 	cursor:pointer;
+    width: 4em;
+    left:1em;
+	background:transparent;
+    text-align: center;
+    font-size: 1em;
+	border:0;
+	outline: none;
+	position: relative;
+}
+.toggle-btn1
+{
+	padding:0em 0em;
+    margin:0em 1.8em;
+    left: 5em;
+	cursor:pointer;
+    width: 3em;
 	background:transparent;
     text-align: left;
-    font-size: 1.30em;
+    font-size: 1em;
 	border:0;
 	outline: none;
 	position: relative;
 }
 #btn
 {
-	top: 0;
+	
 	position: absolute;
-	width: 14.5em;
-    margin: 0 1.35em;
+	width: 7em;
+    margin: 0 0.9em;
 	height: 100%;
 	background: #EFD3D7;
 	border-radius: 2.25em;
@@ -390,10 +414,10 @@ form#passwd {
 }
 .form-box
 {
-    width:50.75em;
-	height:80.75em;;
+    width:30.75em;
+	height:50.75em;;
 	position:relative;
-    top: 12em;
+    top: 7em;
 	margin:2% auto;
 	background:rgba(0,0,0,0.3);
 	padding:0.05em;
@@ -402,9 +426,9 @@ form#passwd {
 
     h2 {
     display: block;
-    font-size: 3em;
-    padding: 0.5em 1em;
-        width: 14em;
+    font-size: 1.5em;
+    padding: 0.5em 0em;
+        width: 10em;
     margin-block-start: 0.43em;
     margin-block-end: 0.43em;
     margin-inline-start: 0px;
@@ -416,7 +440,7 @@ form#passwd {
 }
 .input-group-account
 {
-	top: 10.75em;
+	top: 7.75em;
 	position:absolute;
 	width:25.625em;
 	transition:.5s;
@@ -426,16 +450,16 @@ form#passwd {
 }
 .input-group-passwd
 {
-    top: 10.5em;;
+    top: 8.5em;;
 	position:absolute;
 	width:30.625em;
 	transition:.5s;
 }
     .input-field
 {
-	width: 100%;
+	width: 10em;
 	padding:0 0;
-	margin:0 2em;
+	margin:0 0em;
     color: aliceblue;
     left: inherit;
 	border-left:0;
@@ -447,7 +471,7 @@ form#passwd {
 }
     .input-field-p
 {
-	width: 100%;
+	width: 7em;
 	padding:0 0;
     color: aliceblue;
 	margin:1.4em 1.5em;
@@ -461,14 +485,14 @@ form#passwd {
 }
 .submit-btn
 {
-    width: 70%;
-	padding: 0.238em 2.25em;
+    width: 4em;
+	padding: 0.238em 0em;
 	cursor: pointer;
 	display: block;
-	margin: 1em 6em;
+	margin: 2em 5em;
 	background: #EFD3D7;
 	border: 0;
-    font-size: 2em;
+    font-size: 1.5em;
     box-shadow: 0.75em 0.188em 1.25em 0.125em #EFD3D7;
 	outline: none;
 	border-radius: 1.875em;
@@ -476,38 +500,29 @@ form#passwd {
     
     .submit-btn-p
 {
-    width: 60%;
-	padding: 0.38em 2.25em;
+    width: 4em;
+    padding: 0.338em 0em;
 	cursor: pointer;
 	display: block;
-	margin: 0.6em 8em;
+	margin: 2em 6em;
 	background: #EFD3D7;
 	border: 0;
-    font-size: 2.5em;
+    font-size: 1.3em;
     box-shadow: 0.75em 0.188em 1.25em 0.125em #EFD3D7;
 	outline: none;
 	border-radius: 2.875em;
 }
-    #account
-{
-	left:3.25em;
-}
+
 #account input
 {
 	color:white;
-	font-size: 3.125em;
+	font-size: 2.125em;
 }
-#passwd
-{
-	left:31.25em;
-}
-form#passwd {
-    left: 49.75em;
-}
+
 #passwd input
 {
 	color:white;
-	font-size: 3.125em;
+	font-size: 2.125em;
 }
 }
 /* END MOBILE MENU BIG*/
@@ -519,16 +534,13 @@ form#passwd {
 
 .full-page
 {
-    height: 300%;
-    width: 300%;
+    height: 110vh;
+    width: 100%;
     background: linear-gradient(to right,#685475, #6D6875, #8E9AAF, #CBC0D3, #EFD3D7);
     background-size: cover;
     background-position: center;
 	position: absolute;
 }
-
-    
- 
 
     .myaccount {
         flex-basis: auto;
@@ -545,8 +557,8 @@ form#passwd {
 }
 .form-box
 {
-    width:34.75em;
-	height:48.75em;;
+    width:14.75em;
+	height:28.75em;;
 	position:relative;
     top: 8em;
 	margin:2% auto;
@@ -558,27 +570,47 @@ form#passwd {
     
 .button-box
 {
-	width: 19em;
-	margin:1.2em auto;
+	width: 10em;
+	margin:1.2em -0.7em;
 	position:relative;
-	box-shadow: 0.75em 0.188em 1em 0.125em #EFD3D7;
-	border-radius: 1.875em;
+	box-shadow: 0em 0em 0em 0em #EFD3D7;
+	border-radius: 1.175em;
 }
 .toggle-btn
 {
-	padding:0.9em 2.1em;
+	padding: 0.9em;
+    left:3.5em;
 	cursor:pointer;
 	background:transparent;
 	border:0;
+    width: 3em;
+    text-align: center;
+    font-size: 0.7em;
+
 	outline: none;
 	position: relative;
 }
+    .toggle-btn1
+{
+	padding:0.2em;
+    left:9.5em;
+	cursor:pointer;
+	background:transparent;
+    text-align: center;
+    font-size: 0.7em;
+    width: 3em;
+	border:0;
+	outline: none;
+
+	position: relative;
+}
+ 
 #btn
 {
 	top: 0;
-	left:-1em;
+	margin: 0em 2em;
 	position: absolute;
-	width: 10.5em;
+	width: 5em;
 	height: 100%;
 	background: #EFD3D7;
 	border-radius: 6.25em;
@@ -586,26 +618,24 @@ form#passwd {
 }
 .input-group-account
 {
-	top: 5.75em;
-    left: 1.25em;
-    margin: 2px 0;
-	width:12.5em;
+	top: 4.75em;
+    left: 0em;
+	width:7.5em;
 	transition:.5s;
 }
 .input-group-passwd
 {
     top: 4.5em;;
     left: 10em;
-    margin: 2px 0;
 	position:absolute;
-	width:12.5em;
+	width:7.5em;
 	transition:.5s;
 }
 .input-field
 {
-	width: 200%;
+	width: 10em;
 	padding:0 0em;
-	margin:1em 0em;
+	margin:0.4em -2em;
     color: aliceblue;
     left: inherit;
 	border-left:0;
@@ -616,10 +646,10 @@ form#passwd {
 	background: transparent;
 }
     h2 {
-    display: block;
-    font-size: 2em;
-    width: 24em;
-    padding: 0em 1em;
+
+    padding: 0em 0em;
+    font-size: 1em;
+    width: 10em;
     margin-block-start: 0.33em;
     margin-block-end: 0.33em;
     margin-inline-start: 0px;
@@ -631,10 +661,10 @@ form#passwd {
 }
      .input-field-p
 {
-	width: 200%;
-	padding:0.8em 0;
+	width: 8em;
+	padding:0em 0;
     color: aliceblue;
-	margin:2em 2em;
+	margin:2em -1em;
 	border-left:0;
 	border-top:0;
 	border-right:0;
@@ -645,11 +675,11 @@ form#passwd {
 }
 .submit-btn
 {
-    width: 50%;
+    width: 6em;
 	padding: 0.438em 1.25em;
 	cursor: pointer;
 	display: block;
-	margin: 0.5em 24em;
+	margin: 2em 1em;
 	background: #EFD3D7;
 	border: 0;
     box-shadow: 0.75em 0.188em 1.25em 0.125em #EFD3D7;
@@ -659,43 +689,29 @@ form#passwd {
        
     .submit-btn-p
 {
-    width: 50%;
+    width: 6em;
 	padding: 0.438em 1.25em;
 	cursor: pointer;
 	display: block;
-	margin: 0.5em 20em;
+	margin: 0.5em 1em;
 	background: #EFD3D7;
 	border: 0;
     box-shadow: 0.75em 0.188em 1.25em 0.125em #EFD3D7;
 	outline: none;
 	border-radius: 1.875em;
 }
- #account
-{
-    color: aliceblue;
-	left:1.75em;
-}
+
 #account input
 {
 	color:white;
-	font-size: 1.725em;
+	font-size: 1.125em;
 }
-form#account {
-    left: 1.75em;
-}
-#passwd
-{
-    color: aliceblue;
-	left:27.25em;
-}
-form#passwd {
-    color: aliceblue;
-    left: 28.25em;
-}
+
 #passwd input
 {
-	color:white;
-	font-size: 1.725em;
+	color:aliceblue;
+     left: 28.25em;
+	font-size: 1.2em;
 }
     
 }
