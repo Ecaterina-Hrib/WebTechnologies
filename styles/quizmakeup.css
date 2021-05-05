@@ -153,7 +153,6 @@ body::-webkit-scrollbar-thumb {
 
 /* DESKTOP MENU */
 @media screen and (min-width: 701px) {
-
   #nav-menu-button {
     display: none;
   }
@@ -168,8 +167,6 @@ body, p, h1, h2, h3, h4, ul, li {
   margin: 0;
   padding: 0;
 }
-
-
 
 #customize-form
 {
@@ -188,6 +185,7 @@ body{
     background: linear-gradient(to left,#685475, #6D6875, #8E9AAF, #CBC0D3, #EFD3D7,#CBC0D3, #8E9AAF,#6D6875,#685475);
     background-size: cover;
     background-position: center;
+    background-repeat: repeat;
 	  position: absolute;
 }
 
@@ -389,7 +387,7 @@ h2{
 }
 .submit-btn{
     top:3em;
-  margin: 1em 36em;
+  margin: 1em 20em;
     width:8.5em;
     height: 3em;
     font-weight: bold;
@@ -412,11 +410,12 @@ h2{
 
 .full-page
 {
-    height: 300%;
-    width: 300%;
+    height: 140vh;
+    width: 100%;
    background: linear-gradient(to left,#685475, #6D6875, #8E9AAF, #CBC0D3, #EFD3D7,#CBC0D3, #8E9AAF,#6D6875,#685475);
     background-size: cover;
     background-position: center;
+    background-repeat: repeat;
 	position: absolute;
 }
 
@@ -430,19 +429,34 @@ h2{
  .form-box
 {
     top:10em;
-    width:43.75em;
-	height:85.75em;;
+    width:15.75em;
+	height:40.75em;;
 	position:relative;
     top: 6em;
 	margin:2% auto;
 	background:rgba(0,0,0,0.3);
 	
     overflow: hidden;
-}    
+}   
+
+.titlu {
+    display: block;
+    font-size: 1.5em;
+    padding: 0.5em 1em;
+    margin: 2em 4em;
+    margin-block-start: 0.43em;
+    margin-block-end: 0.43em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    
+    color: aliceblue;
+    
+}
     
 h2{
     display: block;
-    font-size: 3em;
+    font-size: 1.25em;
     padding: 0.5em 1.2em;
     margin: 2em 4em;
     margin-block-start: 0.43em;
@@ -457,10 +471,10 @@ h2{
 
 .btn25{
     
-    margin: 0.5em 0.5em;
-    width:6em;
-    height: 6em;
-    font-size: 1.55em;
+    margin: 0.5em 0.2em;
+    width:3.2em;
+    height: 3.2em;
+    font-size: 1em;
     font-weight: bold;
     font-family: 'Nunito',sans-serif;
     text-align: center;
@@ -469,15 +483,15 @@ h2{
     background-size: cover;
     border:none;
     box-shadow: 0.1em 0.1em 1em 0.111em #EFD3D7;
-	border-radius: 1.875em;
+	border-radius: 1em;
 }
 .btn35{
     
     
     margin: 0.5em 0.5em;
-    width:6em;
-    height: 6em;
-    font-size: 1.55em;
+    width: 4.3em;
+    height: 4.3em;
+    font-size: 0.75em;
     font-weight: bold;
     font-family: 'Nunito',sans-serif;
     text-align: center;
@@ -486,16 +500,15 @@ h2{
     background-size: cover;
     border:none;
     box-shadow: 0.1em 0.1em 1em 0.111em #EFD3D7;
-	border-radius: 1.875em;
+	border-radius: 1em;
 
 }
 .btn45{
     
-    
     margin: 0.5em 0.5em;
-    width:6em;
-    height: 6em;
-    font-size: 1.55em;
+    width: 4.3em;
+    height: 4.3em;
+    font-size: 0.75em;
     font-weight: bold;
     font-family: 'Nunito',sans-serif;
     text-align: center;
@@ -504,16 +517,16 @@ h2{
     background-size: cover;
     border:none;
     box-shadow: 0.1em 0.1em 1em 0.111em #EFD3D7;
-	border-radius: 1.875em;
+	border-radius: 1em;
 
 }
 .btn55{
     
     
     margin: 0.5em 0em;
-    width:6em;
-    height: 6em;
-    font-size: 1.55em;
+    width:3.2em;
+    height: 3.2em;
+    font-size: 1em;
     font-weight: bold;
     font-family: 'Nunito',sans-serif;
     text-align: center;
@@ -522,17 +535,17 @@ h2{
     background-size: cover;
     border:none;
     box-shadow: 0.1em 0.1em 1em 0.111em #EFD3D7;
-	border-radius: 1.875em;
+	border-radius: 1em;
 
 }
 
 .buttongala{
     
     
-    margin: 1em 4em;
-    width:6em;
-    height: 6em;
-    font-size: 1.55em;
+    margin: 1em 1.5em;
+    width:4em;
+    height: 4em;
+    font-size: 1.25em;
     font-weight: bold;
     font-family: 'Nunito',sans-serif;
     text-align: center;
@@ -541,16 +554,16 @@ h2{
     background-size: cover;
     border:none;
     box-shadow: 0.1em 0.1em 1em 0.111em #EFD3D7;
-	border-radius: 1.875em;
+	border-radius: 1.25em;
 
 }
 .buttondaily{
     
     
-    margin: 1em 3em;
-    width:6em;
-    height: 6em;
-    font-size: 1.55em;
+    margin: 1em 0.5em;
+    width:4em;
+    height: 4em;
+    font-size: 1.25em;
     font-weight: bold;
     font-family: 'Nunito',sans-serif;
     text-align: center;
@@ -559,16 +572,16 @@ h2{
     background-size: cover;
     border:none;
     box-shadow: 0.1em 0.1em 1em 0.111em #EFD3D7;
-	border-radius: 1.875em;
+	border-radius: 1.25em;
 
 }
 .buttondry{
     
     
-    margin: 1em 2em;
-    width:6em;
-    height: 6em;
-    font-size: 1.55em;
+    margin: 1em 1em;
+    width:3.25em;
+    height: 3.25em;
+    font-size: 1em;
     font-weight:bold;
     font-family: 'Nunito',sans-serif;
     text-align: center;
@@ -577,16 +590,16 @@ h2{
     background-size: cover;
     border:none;
     box-shadow: 0.0em 0.1em 1em 0.111em #EFD3D7;
-	border-radius: 1.875em;
+	border-radius: 1em;
 
 }
 .buttonbal{
     
     
-    margin: 1em 0.5em;
-    width:6em;
-    height: 6em;
-    font-size: 1.55em;
+    margin: 0.75em 0.5em;
+    width:4.5em;
+    height: 4.5em;
+    font-size: 0.75em;
     font-weight: bold;
     font-family: 'Nunito',sans-serif;
     text-align: center;
@@ -596,16 +609,16 @@ h2{
     background-size: cover;
     border:none;
     box-shadow: 0.01em 0.1em 1em 0.111em #EFD3D7;
-	border-radius: 1.875em;
+	border-radius: 1em;
 
 }
 .buttonoily{
     
     
-    margin: 1em 2em;
-    width:6em;
-    height: 6em;
-    font-size: 1.55em;
+    margin: 1em 1em;
+    width:3.25em;
+    height: 3.25em;
+    font-size: 1em;
     font-weight: bold;
     font-family: 'Nunito',sans-serif;
     
@@ -616,17 +629,17 @@ h2{
     background-size:cover;
     border:none;
     box-shadow: 0.01em 0.1em 1em 0.111em #EFD3D7;
-	border-radius: 1.875em;
+	border-radius: 1em;
 
 }
 .submit-btn{
     top:1em;
-  margin:0em 15em;
+  margin:0em 3em;
     width: 5em;
-    height: 2.6em;
+    height: 2em;
     font-weight: bold;
     font-family: 'Nunito',sans-serif;
-    font-size: 1.9em;
+    font-size: 1.35em;
     text-align: center;
     position: relative;
     background-color: gainsboro;
@@ -644,37 +657,53 @@ h2{
 
 .full-page
 {
-    height: 200%;
-    width: 200%;
+    height: 175vh;
+    width: 100%;
     background: linear-gradient(to left,#685475, #6D6875, #8E9AAF, #CBC0D3, #EFD3D7,#CBC0D3, #8E9AAF,#6D6875,#685475);
     background-size: cover;
     background-position: center;
+    background-repeat: repeat;
 	position: absolute;
 }
 
-
     .customize {
         flex-basis: auto;
-    padding: 2rem 4em;
-        font-size: 3em;
+    padding: 1rem 4em;
+        font-size: 2em;
         border-bottom: 1px solid #ffe4e4;
+        
     }
     .form-box
 {
     
-    width:43.75em;
-	height:80.75em;;
+    width:27em;
+	height:50.75em;;
 	position:relative;
-    top: 10em;
+    top: 8em;
 	margin:2% auto;
 	background:rgba(0,0,0,0.3);
+    
 
     overflow: hidden;
 }    
+.titlu {
+    display: block;
+    font-size: 2em;
+    padding: 0.5em 2em;
+    margin: 1.5em 3em;
+    margin-block-start: 0.43em;
+    margin-block-end: 0.43em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
     
+    color: aliceblue;
+    
+}
+
 h2{
     display: block;
-    font-size: 3em;
+    font-size: 1.5em;
     padding: 0.5em 1.2em;
     margin: 2em 4em;
     margin-block-start: 0.43em;
@@ -690,10 +719,10 @@ h2{
     
 .btn25{
     
-    margin: 1em 1em;
-    width:5em;
-    height: 5em;
-    font-size: 1.55em;
+    margin: 1em 1.75em;
+    width: 4em;
+    height: 4em;
+    font-size: 1em;
     font-weight: bold;
     font-family: 'Nunito',sans-serif;
     text-align: center;
@@ -702,15 +731,15 @@ h2{
     background-size: cover;
     border:none;
     box-shadow: 0.1em 0.1em 1em 0.111em #EFD3D7;
-	border-radius: 1.875em;
+	border-radius: 1.5em;
 }
 .btn35{
     
     
     margin: 1em 1em;
-    width:5em;
-    height: 5em;
-    font-size: 1.55em;
+    width:4em;
+    height: 4em;
+    font-size: 1em;
     font-weight: bold;
     font-family: 'Nunito',sans-serif;
     text-align: center;
@@ -719,16 +748,16 @@ h2{
     background-size: cover;
     border:none;
     box-shadow: 0.1em 0.1em 1em 0.111em #EFD3D7;
-	border-radius: 1.875em;
+	border-radius: 1.5em;
 
 }
 .btn45{
     
     
     margin: 1em 1em;
-    width:5em;
-    height: 5em;
-    font-size: 1.55em;
+    width:4em;
+    height: 4em;
+    font-size: 1em;
     font-weight: bold;
     font-family: 'Nunito',sans-serif;
     text-align: center;
@@ -737,16 +766,16 @@ h2{
     background-size: cover;
     border:none;
     box-shadow: 0.1em 0.1em 1em 0.111em #EFD3D7;
-	border-radius: 1.875em;
+	border-radius: 1.5em;
 
 }
 .btn55{
     
     
     margin: 1em 0.6em;
-    width:5em;
-    height: 5em;
-    font-size: 1.55em;
+    width:4em;
+    height: 4em;
+    font-size: 1em;
     font-weight: bold;
     font-family: 'Nunito',sans-serif;
     text-align: center;
@@ -755,17 +784,17 @@ h2{
     background-size: cover;
     border:none;
     box-shadow: 0.1em 0.1em 1em 0.111em #EFD3D7;
-	border-radius: 1.875em;
+	border-radius: 1.5em;
 
 }
 
 .buttongala{
     
     
-    margin: 1em 5em;
-    width:5em;
-    height: 5em;
-    font-size: 1.55em;
+    margin: 1em 4em;
+    width:4em;
+    height: 4em;
+    font-size: 1.25em;
     font-weight: bold;
     font-family: 'Nunito',sans-serif;
     text-align: center;
@@ -774,16 +803,16 @@ h2{
     background-size: cover;
     border:none;
     box-shadow: 0.1em 0.1em 1em 0.111em #EFD3D7;
-	border-radius: 1.875em;
+	border-radius: 1.5em;
 
 }
 .buttondaily{
     
     
-    margin: 1em 3em;
-    width:5em;
-    height: 5em;
-    font-size: 1.55em;
+    margin: 1em 1em;
+    width:4em;
+    height: 4em;
+    font-size: 1.25em;
     font-weight: bold;
     font-family: 'Nunito',sans-serif;
     text-align: center;
@@ -792,16 +821,16 @@ h2{
     background-size: cover;
     border:none;
     box-shadow: 0.1em 0.1em 1em 0.111em #EFD3D7;
-	border-radius: 1.875em;
+	border-radius: 1.5em;
 
 }
 .buttondry{
     
     
-    margin: 1em 3em;
-    width:5em;
-    height: 5em;
-    font-size: 1.55em;
+    margin: 1em 2em;
+    width:3.5em;
+    height: 3.5em;
+    font-size: 1.35em;
     font-weight:bold;
     font-family: 'Nunito',sans-serif;
     text-align: center;
@@ -810,16 +839,16 @@ h2{
     background-size: cover;
     border:none;
     box-shadow: 0.0em 0.1em 1em 0.111em #EFD3D7;
-	border-radius: 1.875em;
+	border-radius: 1.5em;
 
 }
 .buttonbal{
     
     
-    margin: 1em 1em;
-    width:5em;
-    height: 5em;
-    font-size: 1.55em;
+    margin: 1em 0em;
+    width:4.7em;
+    height: 4.7em;
+    font-size: 1em;
     font-weight: bold;
     font-family: 'Nunito',sans-serif;
     text-align: center;
@@ -829,16 +858,16 @@ h2{
     background-size: cover;
     border:none;
     box-shadow: 0.01em 0.1em 1em 0.111em #EFD3D7;
-	border-radius: 1.875em;
+	border-radius: 2em;
 
 }
 .buttonoily{
     
     
     margin: 1em 2em;
-    width:5em;
-    height: 5em;
-    font-size: 1.55em;
+    width:3.5em;
+    height: 3.5em;
+    font-size: 1.35em;
     font-weight: bold;
     font-family: 'Nunito',sans-serif;
     
@@ -849,17 +878,17 @@ h2{
     background-size:cover;
     border:none;
     box-shadow: 0.01em 0.1em 1em 0.111em #EFD3D7;
-	border-radius: 1.875em;
+	border-radius: 1.5em;
 
 }
 .submit-btn{
-    top:2em;
-  margin:0em 15em;
-    width: 5em;
+    top:1em;
+  margin:0em 5em;
+    width: 7em;
     height: 2.6em;
     font-weight: bold;
     font-family: 'Nunito',sans-serif;
-    font-size: 1.9em;
+    font-size: 1.5em;
     text-align: center;
     position: relative;
     background-color: gainsboro;
