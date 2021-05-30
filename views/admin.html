@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Ivy sun - admins only</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;1,200&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="./styles/admin.css">
+      </head>
+
+      <body>
+        <div id="nav-background">
+            <div id="nav-container">
+              <header id="nav-header">
+                <h1><a class="nav-logo-function" href="index.html#home" id="nav-logo">
+                  Ivy
+                </a></h1>
+                <img src="https://i.imgur.com/xcFvxAK.png" class="hamburger-img" id="nav-menu-button">
+              </header>
+              <nav>
+                <ul class="nav-ul hide-ul">
+                  <li><a class="nav-link" href="index.html#about">About Us</a></li>
+                  <li><a class="nav-link" href="index.html#contact">Contact</a></li>
+                  <li><a class="nav-link" href="search.html">Search</a></li>
+                  <li><a class="nav-link" href="admin.html">Admin</a></li>
+                  <li><a class="nav-link" href="index.html">Logout</a></li>
+                </ul>
+              </nav>
+            </div>
+        </div>
+          <script src="./scripts/nav.js"></script>
+
+          <div class="admin-page">
+                <div class="title-container">
+                    <div class="title">
+                        <h2> Admin Page </h2>
+                    </div>
+                    <div class="add-product">
+                        <a href="add-product.html">
+                            <button class="add-product-button">Add product</button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="filter-container">
+                    <input type="text" class="search-input" placeholder="Search by keywords...">
+
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            Filter by age
+                            <img class="dropdown-arrow" src="https://i.imgur.com/8HzN0T7.png">
+                        </button>
+                        <div class="dropdown-content">
+                            <form>
+                                <input type="checkbox" id="age1" name="age1" value="teen">
+                                <label for="age1"> 12-18 </label><br>
+                                <input type="checkbox" id="age2" name="age2" value="teen+">
+                                <label for="age2"> 18-25</label><br>
+                                <input type="checkbox" id="age3" name="age3" value="young-adult">
+                                <label for="age3"> 25-30</label><br>
+                                <input type="checkbox" id="age4" name="age4" value="adult">
+                                <label for="age4"> 30-45</label><br>
+                                <input type="checkbox" id="age5" name="age5" value="old-adult">
+                                <label for="age4"> >45</label><br>
+                            </form>
+                        </div>
+                        
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            Filter by skin type
+                            <img class="dropdown-arrow" src="https://i.imgur.com/8HzN0T7.png">
+                        </button>
+                        <div class="dropdown-content">
+                            <form>
+                                <input type="checkbox" id="skin1" name="skin1" value="oily">
+                                <label for="skin1"> oily</label><br>
+                                <input type="checkbox" id="skin2" name="skin2" value="balanced">
+                                <label for="skin2"> balanced</label><br>
+                                <input type="checkbox" id="skin3" name="skin3" value="dry">
+                                <label for="skin3"> dry</label><br>
+                                <input type="checkbox" id="skin4" name="skin4" value="combination">
+                                <label for="skin4"> combination</label><br>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            Filter by day time
+                            <img class="dropdown-arrow" src="https://i.imgur.com/8HzN0T7.png">
+                        </button>
+                        <div class="dropdown-content">
+                            <form>
+                                <input type="checkbox" id="day1" name="day1" value="every-day look">
+                                <label for="day1"> daily</label><br>
+                                <input type="checkbox" id="day2" name="day2" value="natural">
+                                <label for="day2"> fancy</label><br>
+                                <input type="checkbox" id="day3" name="day3" value="fancy">
+                                <label for="day3"> natural</label><br>
+                                <input type="checkbox" id="day4" name="day4" value="event">
+                                <label for="day4"> event</label><br>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            Filter by color palette
+                            <img class="dropdown-arrow" src="https://i.imgur.com/8HzN0T7.png">
+                        </button>
+                        <div class="dropdown-content">
+                            <form>
+                                <input type="checkbox" id="color1" name="color1" value="earthy browns">
+                                <label for="color1"> earthy browns</label><br>
+                                <input type="checkbox" id="color2" name="color2" value="bright reds">
+                                <label for="color2"> bright reds</label><br>
+                                <input type="checkbox" id="color3" name="color3" value="nature green">
+                                <label for="color3"> nature green</label><br>
+                                <input type="checkbox" id="color4" name="color4" value="sky blue">
+                                <label for="color4"> sky blue</label><br>
+                                <input type="checkbox" id="color5" name="color5" value="unicorn pastels">
+                                <label for="color5"> unicorn pastels</label><br>
+                                <input type="checkbox" id="color6" name="color6" value="pink dreams">
+                                <label for="color6"> pink dreams</label><br>
+                            </form>
+                        </div>
+                    </div>
+
+                    <button class="search-button" type="button" value="Search">Search</button>
+                </div>
+
+                <div class="product-container-parent">
+                    <div class="product-container">
+                        
+                        
+                        <div class="product">
+                            <img class="product-img" src="https://i.imgur.com/n52fLCF.jpg">
+                            <h5 class="product-name"> Makeup Revolution Wispy False Lash Mascara </h5>
+                            <div class="tag-list">
+                                
+                            </div>
+                            <div class="btn">
+
+                                <a href="update-product.html">
+                                    <button class="btn-update"> Update </button>
+                                </a>
+                                <button class="btn-delete"> Delete </button>
+                            </div>
+                        </div>
+
+                        <div class="product">
+                            <img class="product-img" src="https://i.imgur.com/n52fLCF.jpg">
+                            <h5 class="product-name"> Makeup Revolution Wispy False Lash Mascara </h5>
+                            <div class="tag-list">
+                                <div class="tag">
+                                    oily
+                                </div>
+                            </div>
+                            <div class="btn">
+
+                                <a href="update-product.html">
+                                    <button class="btn-update"> Update </button>
+                                </a>
+                                <button class="btn-delete"> Delete </button>
+                            </div>
+                        </div>
+
+                        <div class="product">
+                            <img class="product-img" src="https://i.imgur.com/n52fLCF.jpg">
+                            <h5 class="product-name"> Makeup Revolution Wispy False Lash Mascara </h5>
+                            <div class="tag-list">
+                                <div class="tag">
+                                    oily
+                                </div>
+                                <div class="tag">
+                                    oily
+                                </div>
+                                <div class="tag">
+                                    oily
+                                </div>
+                                <div class="tag">
+                                    oily
+                                </div>
+                                <div class="tag">
+                                    oily
+                                </div>
+                                <div class="tag">
+                                    oily
+                                </div>
+                                <div class="tag">
+                                    oily
+                                </div>
+                                <div class="tag">
+                                    oily
+                                </div>
+                                <div class="tag">
+                                    oily
+                                </div>
+                                <div class="tag">
+                                    oily
+                                </div>
+                            </div>
+                            <div class="btn">
+
+                                <a href="update-product.html">
+                                    <button class="btn-update"> Update </button>
+                                </a>
+                                <button class="btn-delete"> Delete </button>
+                            </div>
+                        </div>
+                        
+                        <div class="product">
+                            <img class="product-img" src="https://i.imgur.com/n52fLCF.jpg">
+                            <h5 class="product-name"> Makeup Revolution Wispy False Lash Mascara </h5>
+                            <div class="tag-list">
+                                <div class="tag">
+                                    oily
+                                </div>
+                                <div class="tag">
+                                    oily
+                                </div>
+                                <div class="tag">
+                                    oily
+                                </div>
+                            </div>
+                            <div class="btn">
+
+                                <a href="update-product.html">
+                                    <button class="btn-update"> Update </button>
+                                </a>
+                                <button class="btn-delete"> Delete </button>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>   
+          </div>
+    
+      </body>
+</html>
