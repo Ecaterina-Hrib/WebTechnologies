@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;1,200&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body onload=populateData()>
     <div class="div-body">
         <div id="nav-background">
             <div id="nav-container">
@@ -27,23 +27,15 @@
                         <li><a class="nav-link" href="index.html#about">About Us</a></li>
                         <li><a class="nav-link" href="index.html#contact">Contact</a></li>
                         <li><a class="nav-link" href="search.html">Search</a></li>
-                        <li><a class="nav-link" href="login.html">Login</a></li>
+                        {{loggedin}}
 
 
                     </ul>
                 </nav>
             </div>
         </div>
-        <script src="./scripts/nav.js"></script>
+        <script src="scripts/nav.js"></script>
 
-        <!-- <div class="page-nav">
-                <div class="left-nav">
-                    
-                </div>
-                <div class="right-nav">
-                    
-                </div>
-            </div> -->
         <div class="page">
             <div class="left">
                 <div class="title"> Filter </div>
@@ -108,210 +100,15 @@
             </div>
             <div class="right">
                 <div class="search-section">
-                    <input type="text" class="search-input" placeholder="search by name/id">
+                    <input type="text" id="searchbar" onchange="filterByName()" class="search-input" placeholder="search by name">
                     <button class="search-button" type="button" value="Search">Search</button>
                 </div>
                 <div class="product-section">
 
-                    <div class="row">
-                        <div class="col">
-                            <div class="product-container">
-                                <div class="wrap">
-                                    <img class="product-img" onclick="on()" src="https://i.imgur.com/cSkHktj.jpg">
-                                    <div class="hide" id="overlay" onclick="off()">
-                                        <h3> Rimel cu aroma tropicala </h3>
-                                        <h5> Descriere : </h5>
-                                        <p> acjdkj </p>
-                                    </div>
-                                </div>
-                                <div class="details"> Rimel </div>
-                                <div class="tags">
-                                    <div class="tag">
-                                        oily
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="product-container">
-                                <div class="wrap">
-                                    <img class="product-img" onclick="on()" src="https://i.imgur.com/cSkHktj.jpg">
-                                    <div class="hide" id="overlay" onclick="off()">
-                                        <h3> Rimel cu aroma tropicala </h3>
-                                        <h5> Descriere : </h5>
-                                        <p> descrierea produsului aici bla bla bla ------------ -------- -- - - - - - - ---- </p> 
-                                    </div>
-                                </div>
-                                <div class="details"> Rimel </div>
-                                <div class="tags">
-                                    <div class="tag">
-                                        oily
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="product-container">
-                                <div class="wrap">
-                                    <img class="product-img" onclick="on()" src="https://i.imgur.com/cSkHktj.jpg">
-                                    <div class="hide" id="overlay" onclick="off()">
-                                        <h3> Rimel cu aroma tropicala </h3>
-                                        <h5> Descriere : </h5>
-                                        <p> descrierea produsului aici bla bla bla ------------ -------- -- - - - - - - ---- </p> 
-                                    </div>
-                                </div>
-                                <div class="details"> Rimel </div>
-                                <div class="tags">
-                                    <div class="tag">
-                                        oily
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="product-container">
-                                <div class="wrap">
-                                    <img class="product-img" onclick="on()" src="https://i.imgur.com/cSkHktj.jpg">
-                                    <div class="hide" id="overlay" onclick="off()">
-                                        <h3> Rimel cu aroma tropicala </h3>
-                                        <h5> Descriere : </h5>
-                                        <p> descrierea produsului aici bla bla bla ------------ -------- -- - - - - - - ---- </p> 
-                                    </div>
-                                    
-                                </div>
-                                <div class="details"> Rimel </div>
-                                <div class="tags">
-                                    <div class="tag">
-                                        oily
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="product-container">
-                                <div class="wrap">
-                                    <img class="product-img" onclick="on()" src="https://i.imgur.com/cSkHktj.jpg">
-                                    <div class="hide" id="overlay" onclick="off()">
-                                        <h3> Rimel cu aroma tropicala </h3>
-                                        <h5> Descriere : </h5>
-                                        <p> descrierea produsului aici bla bla bla ------------ -------- -- - - - - - - ---- </p> 
-                                    </div>
-                                </div>
-                                <div class="details"> Rimel </div>
-                                <div class="tags">
-                                    <div class="tag">
-                                        oily
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="product-container">
-                                <div class="wrap">
-                                    <img class="product-img" onclick="on()" src="https://i.imgur.com/cSkHktj.jpg">
-                                    <div class="hide" id="overlay" onclick="off()">
-                                        <h3> Rimel cu aroma tropicala </h3>
-                                        <h5> Descriere : </h5>
-                                        <p> descrierea produsului aici bla bla bla ------------ -------- -- - - - - - - ---- </p> 
-                                    </div>
-                                </div>
-                                <div class="details"> Rimel </div>
-                                <div class="tags">
-                                    <div class="tag">
-                                        oily
-                                    </div>
-                                    <div class="tag">
-                                        oily
-                                    </div>
-                                    <div class="tag">
-                                        oily
-                                    </div>
-                                    <div class="tag">
-                                        oily
-                                    </div>
-                                    <div class="tag">
-                                        oily
-                                    </div>
-                                    <div class="tag">
-                                        oily
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="product-container">
-                                <div class="wrap">
-                                    <img class="product-img" onclick="on()" src="https://i.imgur.com/cSkHktj.jpg">
-                                    <div class="hide" id="overlay" onclick="off()">
-                                        <h3> Rimel cu aroma tropicala </h3>
-                                        <h5> Descriere : </h5>
-                                        <p> descrierea produsului aici bla bla bla ------------ -------- -- - - - - - - ---- </p> 
-                                    </div>
-                                </div>
-                                <div class="details"> Rimel </div>
-                                <div class="tags">
-                                    <div class="tag">
-                                        oily
-                                    </div>
-                                    <div class="tag">
-                                        oily
-                                    </div>
-                                    <div class="tag">
-                                        oily
-                                    </div>
-                                    <div class="tag">
-                                        oily
-                                    </div>
-                                    <div class="tag">
-                                        oily
-                                    </div>
-                                    <div class="tag">
-                                        oily
-                                    </div>
-                                    <div class="tag">
-                                        oily
-                                    </div>
-                                    <div class="tag">
-                                        oily
-                                    </div>
-                                    <div class="tag">
-                                        oily
-                                    </div>
-                                    <div class="tag">
-                                        oily
-                                    </div>
-                                    <div class="tag">
-                                        oily
-                                    </div>
-                                    <div class="tag">
-                                        oily
-                                    </div>
-                                    <div class="tag">
-                                        oily
-                                    </div>
-                                    <div class="tag">
-                                        oily
-                                    </div>
-                                    <div class="tag">
-                                        oily
-                                    </div>
-                                    <div class="tag">
-                                        oily
-                                    </div>
-                                    <div class="tag">
-                                        oily
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <script src="./scripts/search.js"> </script>
+                    <div class="row" id="productSection">
+                        
+                        
+                        <script src="scripts/search.js"> </script>
                     </div>
 
 
