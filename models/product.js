@@ -4,11 +4,7 @@ const Schema = new mongoose.Schema({
   name: String,
   url: String,
   descriere: String,
-  type: String,
-  age: [String],
-  skin: [String],
-  day: [String],
-  color: [String],
+  tags: [String]
 });
 const product = mongoose.model("product", Schema);
 module.exports = product;

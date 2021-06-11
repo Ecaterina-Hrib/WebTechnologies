@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> Ivy sun </title>
-    <link href="styles/search.css" rel="stylesheet">
+    <link href="styles/makeup.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;1,200&display=swap" rel="stylesheet">
 </head>
@@ -99,7 +99,7 @@
             <div class="right">
                 <div class="search-section">
                     <input type="text" id="searchbar" onchange="filterByName()" class="search-input" placeholder="search by name">
-                    <button class="search-button" type="button" value="Search" onclick="populateData()">All products</button>
+                    <button class="search-button" type="button" value="Search">Search</button>
                     <button class="top-button"> Top by age (HTML) </button>
                     <button class="top-button"> Top by age (RSS) </button>
                     <button class="top-button"> Top by age (PDF) </button>
@@ -107,7 +107,24 @@
                 <div class="product-section">
 
                     <div class="row" id="productSection">
-
+                        <div class="col">
+                            <div class="product-container">
+                                <div class="wrap">
+                                    <img class="product-img" onclick="on(this)" src="${imagine}">
+                                    <div class="hide" id="overlay" onclick="off(this)">
+                                        <h3> ${nume} </h3>
+                                        <h5> Descriere </h5>
+                                        <p> ${descriere} </p>
+                                        <h5> Pentru mai multe detalii accesati: </h5>
+                                        <a href="${link}"> ${link} </a>
+                                    </div>
+                                </div>
+                                <div class="details"> ${nume} </div>
+                                <div class="tags">
+                                    ${taguletse}
+                                </div>
+                            </div>
+                        </div>
 
                         <script src="scripts/search.js">
                         </script>

@@ -7,26 +7,29 @@ let serachJS=""
 function getSearchHTML (req, res) {
  
     res.statusCode = 200
+    
     //fs.createReadStream('index.html').pipe(res)
     var data = fs.readFileSync('./views/search.html', 'utf8');
+    
     if(req["headers"]["cookie"].split('=')[1] === "") {
       console.log(`nuebn ${req["headers"]["cookie"].split('=')[1]}`)
       var loggedinstatus = "Login"
+      data = data.replace("{{loggedin}}", `<li><a class="nav-link" href="login.html">${loggedinstatus}</a></li>`)
     }
     else {
       console.log(`nuebn ${req["headers"]["cookie"].split('=')[1]}`)
       res.setHeader("Set-Cookie", 'token="";path=/')
       console.log("nasol tare")
       var loggedinstatus = "Logout"
-
+      data = data.replace("{{loggedin}}", `<li><a class="nav-link" href="Myaccount.html">Account</a></li>
+      <li><a class="nav-link" href="login.html">${loggedinstatus}</a></li>`)
     }
-
-    data = data.replace("{{loggedin}}", `<li><a class="nav-link" href="login.html">${loggedinstatus}</a></li>`)
-      
+    // var loggedinstatus="Login"
+   
     res.setHeader('Content-Type', 'text/html')
     res.write(data)
     res.end();
-  
+    
   
   console.log(fs)
   }
