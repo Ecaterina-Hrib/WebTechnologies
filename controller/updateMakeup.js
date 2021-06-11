@@ -1,12 +1,10 @@
 const fs = require('fs')
 
-
-
-function getAddProductPageHTML (req, res) {
+function getUpdateMakeupHTML (req, res) {
  
   res.statusCode = 200
-  //fs.createReadStream('index.html').pipe(res)
-  var data = fs.readFileSync('./views/add-product.html', 'utf8');
+  //fs.createReadStream('Admin.html').pipe(res)
+  var data = fs.readFileSync('./views/update-makeup.html', 'utf8');
   if(req["headers"]["cookie"].split('=')[1] === "") {
     res.setHeader('Content-Type', 'text/html')
     //res.setHeader('Set-Cookie', token=${token};path=/)
@@ -45,34 +43,18 @@ function exempleAPI(req,res)
   res.write(JSON.stringify({ success: true, message: 'example ran successfully' }))
   res.end()
 }
-function getAddProductPageHTML2 (req, res) {
-  try {
-
-    res.statusCode = 200
-    res.setHeader('Content-Type', 'text/html')
-    res.write(indexHTML)
-    res.end()
-  } catch (e) {
-    console.log(e)
-    res.statusCode = 500
-    res.setHeader('Content-Type', 'text/html')
-    res.write('Internal server error')
-    res.end()
-  }
-}function getAddProductPageCSS1 (req, res) {
-  var data2 = fs.readFileSync('./views/styles/add-product.css', 'utf8');
+function getUpdateMakeupCSS1 (req, res) {
+  var data2 = fs.readFileSync('./views/styles/update-makeup.css', 'utf8');
   res.setHeader('Content-Type', 'text/css')
   res.write(data2)
   res.end()
-
 }
 
-function getAddProductPageCSS2 (req, res) {
+function getUpdateMakeupCSS2 (req, res) {
   var data2 = fs.readFileSync('./views/styles/nav.css', 'utf8');
   res.setHeader('Content-Type', 'text/css')
   res.write(data2)
   res.end()
-
 }
 function getNavbarCSS (req, res) {
   try {
@@ -88,12 +70,12 @@ function getNavbarCSS (req, res) {
     res.end()
   }
 }
-function getAddProductPageJS (req, res) {
+function getUpdateMakeupJS (req, res) {
   var data2 = fs.readFileSync('./views/scripts/nav.js', 'utf8');
   res.setHeader('Content-Type', 'text/javascript')
   res.write(data2)
   res.end()
 }
 
-module.exports = { getAddProductPageHTML, getAddProductPageCSS1,getAddProductPageCSS2, getAddProductPageJS, exempleAPI}
+module.exports = { getUpdateMakeupHTML, getUpdateMakeupCSS1,getUpdateMakeupCSS2, getUpdateMakeupJS, exempleAPI}
 

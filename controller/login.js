@@ -17,33 +17,37 @@ let loginJS=""
 
 function getLoginHTML (req, res) {
  
-    res.statusCode = 200
+  res.statusCode = 200
     //fs.createReadStream('index.html').pipe(res)
     var data = fs.readFileSync('./views/login.html', 'utf8');
     if(req["headers"]["cookie"].split('=')[1] === "") {
       res.setHeader('Content-Type', 'text/html')
-      //res.setHeader('Set-Cookie', `token=${token};path=/`)
-      res.write(data)
-      res.end()
+      //res.setHeader('Set-Cookie', token=${token};path=/)
+      var loggedinstatus = "Login"
+    
+      data = data.replace("{{loggedin}}", `<li><a class="nav-link" href="login.html">${loggedinstatus}</a></li>`)
     }
     else {
       var data = fs.readFileSync('./views/search.html', 'utf8');
       
       var loggedinstatus = "Logout"
 
-      data = data.replace("{{loggedin}}", `<li><a class="nav-link" href="login.html">${loggedinstatus}</a></li>`)
-      
+      data = data.replace("{{loggedin}}", `<li><a class="nav-link" href="Myaccount.html">Account</a></li>
+      <li><a class="nav-link" href="login.html">${loggedinstatus}</a></li>`)
       console.log("ce face")
       
-      res.setHeader('Content-Type', 'text/html')
+      //res.setHeader('Content-Type', 'text/html')
       res.setHeader("Set-Cookie", 'token=;path=/')
-      res.write(data)
-      res.end()
+    
+      
     }
     
-  
-  console.log(fs)
-  }
+      res.setHeader("Set-Cookie", 'token=;path=/')
+      res.write(data)
+    res.end()
+ 
+console.log(fs)
+}
   function getProducts(req,res){
     
   }
