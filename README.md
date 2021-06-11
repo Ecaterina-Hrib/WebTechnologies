@@ -2,5 +2,7 @@
 ## @authors: Coteanu Andra, Hrib Ecaterina, Marele Carina
 
 - makeup product sugestions based on age, day time, color, etc.
+- feedback area
 - skin care products (maybe)
 - skin care quiz (maybe)
+
