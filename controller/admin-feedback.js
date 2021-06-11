@@ -75,6 +75,13 @@ function getAdminFeedbackJS (req, res) {
   res.write(data2)
   res.end()
 }
+function getAdminFeedbackJS2 (req, res) {
+  var data3 = fs.readFileSync('./views/scripts/adminFeedback.js', 'utf8');
+  res.setHeader('Content-Type', 'text/javascript')
+  res.write(data3)
+  res.end()
+}
 
-module.exports = { getAdminFeedbackHTML, getAdminFeedbackCSS1,getAdminFeedbackCSS2, getAdminFeedbackJS, exempleAPI}
+
+module.exports = { getAdminFeedbackHTML, getAdminFeedbackCSS1,getAdminFeedbackCSS2, getAdminFeedbackJS, exempleAPI,getAdminFeedbackJS2}
 
