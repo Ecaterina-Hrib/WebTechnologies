@@ -8,9 +8,9 @@ function off(el) {
     el.style.width = "0";
 }
 
-function buildFeedback(firstName,lastName,subject){
+function buildFeedback(firstName,lastName,country,subject){
     let s = `         <div class="feedback">
-    <p class="date"> <b> ${firstName}  ${lastName}</b> </p>
+    <p class="date"> <b> ${firstName}  ${lastName}</b> in ${country} </p>
     <p class="textul">${subject} </p>
 </div>`
 return s;
@@ -20,7 +20,7 @@ function showFeedbacks(feedbacks){
     document.getElementById("productSectionAdmin").innerHTML = "";
     for (let element of feedbacks) {
         var feedback = document.createElement("div");
-        feedback.innerHTML = buildFeedback(element["firstName"], element["lastName"], element["subject"])
+        feedback.innerHTML = buildFeedback(element["firstName"], element["lastName"],element["country"], element["subject"])
         document.getElementById("productSectionAdmin").appendChild(feedback);
     }
 }
