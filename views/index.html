@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;1,200&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="./styles/index.css">
+    <link rel="stylesheet" type="text/css" href="styles/index.css">
   </head>
 
   <body class="image-display">
@@ -23,8 +23,9 @@
           <ul class="nav-ul hide-ul">
             <li><a class="nav-link" href="index.html#about">About Us</a></li>
             <li><a class="nav-link" href="index.html#contact">Contact</a></li>
-            <li><a class="nav-link" href="search.html">Search</a></li>
-            <li><a class="nav-link" href="login.html">Login</a></li>
+            <li><a class="nav-link" href="makeup.html">Makeup</a></li>
+                    <li><a class="nav-link" href="search.html">Products</a></li>
+            {{loggedin}}
           
             
           </ul>
@@ -67,21 +68,28 @@
       <div class="column">
         <img src="https://i.imgur.com/83QRv1s.gif" class="contact-pic">
       </div>
+      <script src="scripts/contact.js"></script>
       <div class="column">
         <form id="form-centering">
           <label for="fname">First Name</label>
-          <input type="text" id="fname" name="firstname" placeholder="Your name..." class="contact-form">
+          <input type="text" id="fname" name="firstname" placeholder="Your name..." class="contact-form" >
           <label for="lname">Last Name</label>
           <input type="text" id="lname" name="lastname" placeholder="Your last name..." class="contact-form">
           <label for="country">Country</label>
           <select id="country" name="country" class="contact-form">
-            <option value="australia">Romania</option>
-            <option value="canada">Canada</option>
-            <option value="usa">USA</option>
+            <option value="Romania">Romania</option>
+            <option value="Canada">Canada</option>
+            <option value="United Kingdom">United Kingdom</option>
+            <option value="Australia">Australia</option>
+            <option value="India">India</option>
+            <option value="France">France</option>
+            <option value="Spain">Spain</option>
+            <option value="Greece">Greece</option>
+            <option value="USA">USA</option>
           </select>
           <label for="subject">Subject</label>
           <textarea id="subject" name="subject" placeholder="Write something..." class="contact-text"></textarea>
-          <input type="submit" value="Submit" class="contact-submit">
+          <button type="submit" value="Submit" class="contact-submit" onclick="getAllPlaceHoldersAndPost()">Submit</button>
         </form>
       </div>
 
@@ -92,7 +100,7 @@
   <p>Authors: Coteanu Andra & Hrib Ecaterina & Marele Carina </p>
   <p> <a href="doc.html"> Scholarly HTML Documentation </a></p>
 </footer>
-    <script src="./scripts/nav.js"></script>
+    <script src="scripts/nav.js"></script>
   </body>
 
 </html>
