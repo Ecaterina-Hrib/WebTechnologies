@@ -74,6 +74,12 @@ function getIndexJS (req, res) {
   res.write(data2)
   res.end()
 }
+function getIndexJS2 (req, res) {
+  var data2 = fs.readFileSync('./views/scripts/contact.js', 'utf8');
+  res.setHeader('Content-Type', 'text/javascript')
+  res.write(data2)
+  res.end()
+}
 
-module.exports = { getIndexHTML, getIndexCSS1,getIndexCSS2, getIndexJS, exempleAPI}
+module.exports = { getIndexHTML, getIndexCSS1,getIndexCSS2, getIndexJS, exempleAPI,getIndexJS2}
 
