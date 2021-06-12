@@ -11,8 +11,7 @@ router.get('/index.html', indexController.getIndexHTML)
 router.get('/styles/nav.css', indexController.getIndexCSS2)
 router.get('/styles/index.css',indexController.getIndexCSS1)
 router.get('/scripts/nav.js', indexController.getIndexJS)
+router.get('/scripts/contact.js', indexController.getIndexJS2)
 router.get('/products',indexController.getProducts)
-///exemplu
-///router.get(url_string, functieApelata)
-///
+
 module.exports.index = router
