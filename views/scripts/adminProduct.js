@@ -1,13 +1,4 @@
-function on(el) {
-  let div = el.parentElement.children[1];
-  div.style.display = "block";
-  div.style.width = "100%";
-  }
-  
-  function off(el) {
-   el.style.display = "none";
-   el.style.width = "0";
-  }
+
     
     function buildProductAdminHtml(nume, imagine,taguri) {
       let taguletse = ""
@@ -29,9 +20,10 @@ function on(el) {
                                         </div>
                                         <div class="btn">
                                           <a href="update-product.html">
-                                          <button class="btn-update"> Update </button>
+                                          <button  class="btn-update"> Update </button>
                                           </a>
-                                          <button class="btn-delete"> Delete </button>
+                                          <button type="button" onclick="deletingProduct()" class="btn-delete"> Delete </button>
+                                          
                                         </div>       
                                      </div>
                                  </div>
@@ -40,22 +32,31 @@ function on(el) {
     
     }
     
+
     function filterAdminByName() {
       let currentValue = document.getElementById("searchbar").value;
-      console.log(currentValue)
-    
+      console.log(currentValue);
+      currentValue = currentValue.toLowerCase();
       let products = [];
-    
+      
+      let values = currentValue.split(" ");
+      products = window.products.slice();
       if (currentValue != "") {
-        for(let a of window.products) {
-          if( a["name"].indexOf(currentValue) != -1) {
-            products.push(a);
-            console.log(a);
+        for (let x of values) {
+          let produse = [];
+          for (let a of products) {
+            let name = a["name"].toLowerCase();
+            if (name.indexOf(x) != -1 && products.indexOf(name) === -1) {
+              produse.push(a);
+              console.log(a);
+            }
           }
+          products = produse.slice();
+          
         }
+    
         showProducts(products);
-      } 
-      else {
+      } else {
         populateData();
       }
     }
@@ -84,4 +85,14 @@ function on(el) {
         }
       })).json().then((data) => showProducts(data["products"]));
     }
-    
+
+    async function deletingProduct(){
+
+      const response = (await fetch("http://localhost:3000/api/v1/products/delete", {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })).json().then(() => window.location.href = "http://localhost:3000/admin-products.html");
+      
+    }

@@ -35,30 +35,30 @@
         <b> Add new makeup </b>
     </div>
 
-    <div class="add-product-info">
+    <div class="add-makeup-info">
         <div class="info">
-            <label for="product-name">Makeup name: </label>
-            <input class="field" type="text" id="product-name" name="product-name" placeholder="   type the name of the makeup">
+            <label for="makeup-name">Makeup name: </label>
+            <input class="field" type="text" id="makeup-name" name="makeup-name" placeholder="   type the name of the makeup">
         </div>
 
         <div class="info">
             <label for="product-link">Product list: </label>
-            <input class="field" type="text" id="product-link" name="product-link" placeholder="   type the object id for the products used">
+            <input class="field" type="text" id="product-link" name="product-link" placeholder="   type the object id for the products used separated by comma (,)">
         </div>
 
         <div class="info">
-            <label for="product-tag">Makeup tags: </label>
-            <input class="field" type="text" id="product-tag" name="product-tag" placeholder="   type however many tags you want separated by comma (,)">
+            <label for="makeup-tag">Makeup tags: </label>
+            <input class="field" type="text" id="makeup-tag" name="makeup-tag" placeholder="   type however many tags you want separated by comma (,)">
         </div>
 
         <div class="info">
-            <label for="product-desc">Makeup description: </label>
-            <input class="field" type="text" id="product-desc" name="product-desc" placeholder="   type the makeup's description">
+            <label for="makeup-desc">Makeup description: </label>
+            <input class="field" type="text" id="makeup-desc" name="makeup-desc" placeholder="   type the makeup's description">
         </div>
 
         <div class="info">
-            <label for="product-img">Makeup picture: </label>
-            <input class="field" type="text" id="product-img" name="product-img" placeholder="   choose a picture for the makeup">
+            <label for="makeup-img">Makeup picture: </label>
+            <input class="field" type="text" id="makeup-img" name="makeup-img" placeholder="   choose a picture for the makeup">
         </div>
 
 
@@ -66,9 +66,53 @@
     </div>
     <div class="save">
         <a href="admin-makeup.html">
-            <button class="btn-save"> Save </button>
+            <button type="button" onclick="addingMakeup()" class="btn-save"> Save </button>
         </a>
     </div>
+
+
+    <script>
+      
+        async function addingMakeup() {
+          var nameMakeup = document.getElementById("makeup-name").value;
+          var tagList = document.getElementById("makeup-tag").value;
+          var picture = document.getElementById("makeup-img").value;
+          var description = document.getElementById("makeup-desc").value;
+          var products =document.getElementById("product-link").value;
+  
+          if(nameMakeup!==""&&tagList!==""&&picture!==""&&description!==""&&products!==""){
+          var tag = tagList.split(",");
+          var product=products.split(",");
+          var data = {
+            name: nameMakeup,
+            image_path: picture,
+            url: '0',
+            descriere: description,
+            tags: tag,
+            products: product,
+          };
+  
+        
+            const response = await fetch(
+              "http://localhost:3000/api/v1/makeup/",
+              {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+              }
+            );
+  
+            window.location.href = "http://localhost:3000/addedMakeup";
+            }
+            else{
+              alert("All fields have to be written");
+             }
+        }
+      </script>
+
+
 </body>
 
 </html>

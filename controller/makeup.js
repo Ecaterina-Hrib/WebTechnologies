@@ -1,103 +1,64 @@
-const fs = require('fs')
+const makeupsModel = require("../models/makeups");
+const url = require('url');
+async function getAllMakeups(req, res) {
 
-let searchHTML = ""
-let searchCSS = ""
-let serachJS = ""
-
-function getSearchHTML(req, res) {
-
-    res.statusCode = 200
-        //fs.createReadStream('index.html').pipe(res)
-    var data = fs.readFileSync('./views/makeup.html', 'utf8');
-    if (req["headers"]["cookie"].split('=')[1] === "") {
-        console.log(`nuebn ${req["headers"]["cookie"].split('=')[1]}`)
-        var loggedinstatus = "Login"
-    } else {
-        console.log(`nuebn ${req["headers"]["cookie"].split('=')[1]}`)
-        res.setHeader("Set-Cookie", 'token="";path=/')
-        console.log("nasol tare")
-        var loggedinstatus = "Logout"
-
-    }
-
-    data = data.replace("{{loggedin}}", `<li><a class="nav-link" href="login.html">${loggedinstatus}</a></li>`)
-
-    res.setHeader('Content-Type', 'text/html')
-    res.write(data)
-    res.end();
-
-
-    console.log(fs)
+  res.setHeader("Content-Type", "application/json");
+  const queryMakeup = url.parse(req.url,true).query;
+  try {
+    const makeups = await makeupsModel.find({...queryMakeup});
+    console.log(makeups);
+    res.statusCode = 200;
+  console.log(queryMakeup);
+    return res.end(JSON.stringify({ success: true, makeups }));
+  
+   
+  } catch (err) {
+    console.log(err);
+    res.statusCode = 500;
+     return res.end(
+      JSON.stringify({ success: false, message: "Internal server error" })
+    );
+   
+  
+  }
 }
+async function createMakeup(req,res)
+{
 
-function getProducts(req, res) {
+  /* req.body :*/
+   let data = '';
+   req.on('data', chunk => {
+     data += chunk;
+   })
+   req.on('end', () => {
+     req.body = JSON.parse(data);
+    
+     res.setHeader("Content-Type", "application/json");
+     const makeup = new makeupsModel(req.body);
+     console.log(req.body);
+     try {
+ 
+       makeup.save((err) => {
+         if (err) {
+           console.log(err)
+           res.statusCode = 500
+           res.setHeader('Content-Type', 'application/json')
+           res.write(JSON.stringify({ success: false, message: 'Internal server error' }))
+           res.end()
+         } else {
+           res.statusCode = 200
+           res.setHeader('Content-Type', 'application/json')
+           res.write(JSON.stringify({ success: true, message: makeup }))
+           res.end()
+         }
+       })
+     } catch (e) {
+       res.statusCode = 500
+       res.setHeader('Content-Type', 'application/json')
+       res.write(JSON.stringify({ success: false, message: 'Internal server error!' }))
+       res.end()
+     }
+   })
+ }
 
-}
-
-function exempleAPI(req, res) {
-    res.statusCode = 200
-    res.setHeader('Content-Type', 'application/json')
-    res.write(JSON.stringify({ success: true, message: 'example ran successfully' }))
-    res.end()
-}
-
-function getSearchHTML2(req, res) {
-    try {
-
-        res.statusCode = 200
-        res.setHeader('Content-Type', 'text/html')
-        res.write(indexHTML)
-        res.end()
-    } catch (e) {
-        console.log(e)
-        res.statusCode = 500
-        res.setHeader('Content-Type', 'text/html')
-        res.write('Internal server error')
-        res.end()
-    }
-}
-
-function getSearchCSS1(req, res) {
-    var data2 = fs.readFileSync('./views/styles/search.css', 'utf8');
-    res.setHeader('Content-Type', 'text/css')
-    res.write(data2)
-    res.end()
-}
-
-function getSearchCSS2(req, res) {
-    var data2 = fs.readFileSync('./views/styles/nav.css', 'utf8');
-    res.setHeader('Content-Type', 'text/css')
-    res.write(data2)
-    res.end()
-}
-
-function getNavbarCSS(req, res) {
-    try {
-        res.statusCode = 200
-        res.setHeader('Content-Type', 'text/css')
-        res.write(navBarCSS)
-        res.end()
-    } catch (e) {
-        console.log(e)
-        res.statusCode = 500
-        res.setHeader('Content-Type', 'text/css')
-        res.write('Internal server error')
-        res.end()
-    }
-}
-
-function getSearchJS1(req, res) {
-    var data2 = fs.readFileSync('./views/scripts/nav.js', 'utf8');
-    res.setHeader('Content-Type', 'text/javascript')
-    res.write(data2)
-    res.end()
-}
-
-function getSearchJS2(req, res) {
-    var data2 = fs.readFileSync('./views/scripts/search.js', 'utf8');
-    res.setHeader('Content-Type', 'text/javascript')
-    res.write(data2)
-    res.end()
-}
-
-module.exports = { getSearchHTML, getSearchCSS1, getSearchCSS2, getSearchJS1, getSearchJS2, exempleAPI }
+module.exports = { getAllMakeups, createMakeup };

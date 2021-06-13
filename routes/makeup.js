@@ -1,16 +1,9 @@
+
 const { Router } = require('../utils/Router')
-const makeupController = require('../controller/makeup')
-
+const { getAllMakeups } = require('../controller/makeup')
+const { createMakeup }=require('../controller/makeup')
 var router = new Router()
+router.get('/api/v1/makeup/',getAllMakeups)
+router.post('/api/v1/makeup/',createMakeup)
 
-router.get('/makeup', makeupController.getSearchHTML)
-router.get('/makeup.html', makeupController.getSearchHTML)
-router.get('/styles/nav.css', makeupController.getSearchCSS2)
-router.get('/styles/search.css', makeupController.getSearchCSS1)
-router.get('/scripts/nav.js', makeupController.getSearchJS1)
-router.get('/scripts/search.js', makeupController.getSearchJS2)
-router.get('/products', makeupController.getProducts)
-    ///exemplu
-    ///router.get(url_string, functieApelata)
-    ///
-module.exports.makeup = router
+module.exports = router
