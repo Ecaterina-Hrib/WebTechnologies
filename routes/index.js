@@ -12,6 +12,8 @@ router.get('/styles/nav.css', indexController.getIndexCSS2)
 router.get('/styles/index.css',indexController.getIndexCSS1)
 router.get('/scripts/nav.js', indexController.getIndexJS)
 router.get('/scripts/contact.js', indexController.getIndexJS2)
+router.post("/api/v1/counter", indexController.counter)
+router.get("/api/v1/getcounts", indexController.getCounts)
 router.get('/products',indexController.getProducts)
 
 module.exports.index = router
