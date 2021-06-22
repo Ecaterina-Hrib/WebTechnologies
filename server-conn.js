@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const url =process.env.DB_URL;
+const url ='mongodb+srv://TWuser:totTWuser@clusterdb.k4vzb.mongodb.net/ivyDB?retryWrites=true&w=majority';
 
 const connectionParams={
     useNewUrlParser: true,
