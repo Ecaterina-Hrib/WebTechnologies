@@ -96,10 +96,13 @@
 
 
             </div>
-            <div class="right">
+             <div class="right">
                 <div class="search-section">
                     <input type="text" id="searchbar" onchange="filterByName()" class="search-input" placeholder="search by name">
-                    <button class="search-button" type="button" value="Search">Search</button>
+                    <button class="search-button" type="button" value="Search" onclick="populateData()">All makeups</button>
+                    <button onclick="topHTML()" class="top-button"> Top by age (HTML) </button>
+                    <button onclick="topRSS()" class="top-button"> Top by age (RSS) </button>
+                    <button onclick="topPDF()" class="top-button"> Top by age (PDF) </button>
                 </div>
                 <div class="makeup-section">
 
