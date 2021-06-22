@@ -80,6 +80,29 @@ function getIndexJS2 (req, res) {
   res.write(data2)
   res.end()
 }
+function counter(req, res) {
+    let body = "";
 
-module.exports = { getIndexHTML, getIndexCSS1,getIndexCSS2, getIndexJS, exempleAPI,getIndexJS2}
+    req.on("data", (data) => {
+        body += data;
+    })
+    req.on("end", () => {
+        req.body = JSON.parse(body);
+        const id = req.body["id"];
+        if(id_counter[id] === undefined) {
+            id_counter[id] = 1;
+        }
+        else {
+            id_counter[id] += 1;
+        }
+        res.end()
+    })
+}
+
+function getCounts(req, res) {
+    res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify(id_counter));
+}
+
+module.exports = { getIndexHTML, getIndexCSS1,getIndexCSS2, getIndexJS, exempleAPI,getIndexJS2, counter, getCounts}
 
