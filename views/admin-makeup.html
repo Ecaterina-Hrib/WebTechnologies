@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="styles/admin-makeup.css">
 </head>
 
-<body onload=populateData()>
+<body onload="populateData() && isAdminCookie()">
     <div id="nav-background">
         <div id="nav-container">
             <header id="nav-header">
@@ -20,12 +20,12 @@
                 <img src="https://i.imgur.com/xcFvxAK.png" class="hamburger-img" id="nav-menu-button">
             </header>
             <nav>
-                <ul class="nav-ul hide-ul">
+                <ul id="navv" class="nav-ul hide-ul">
                     <li><a class="nav-link" href="index.html#about">About Us</a></li>
                     <li><a class="nav-link" href="index.html#contact">Contact</a></li>
                     <li><a class="nav-link" href="makeup.html">Makeup</a></li>
                     <li><a class="nav-link" href="search.html">Products</a></li>
-                    <li><a class="nav-link" href="admin-home.html">Admin</a></li>
+                    <li><a class="nav-link" href="1401040519092021.html">Admin</a></li>
                     {{loggedin}}
                 </ul>
             </nav>
@@ -55,16 +55,16 @@
                         </button>
                 <div class="dropdown-content">
                     <form>
-                        <input type="checkbox" id="age1" name="age1" value="teen">
+                        <input type="checkbox" id="age1" class="checkboxfilter" name="age1" value="12-18">
                         <label for="age1"> 12-18 </label><br>
-                        <input type="checkbox" id="age2" name="age2" value="teen+">
-                        <label for="age2"> 18-25</label><br>
-                        <input type="checkbox" id="age3" name="age3" value="young-adult">
-                        <label for="age3"> 25-30</label><br>
-                        <input type="checkbox" id="age4" name="age4" value="adult">
-                        <label for="age4"> 30-45</label><br>
-                        <input type="checkbox" id="age5" name="age5" value="old-adult">
-                        <label for="age4"> >45</label><br>
+                        <input type="checkbox" id="age2" class="checkboxfilter" name="age2" value="19-25">
+                        <label for="age2"> 19-25</label><br>
+                        <input type="checkbox" id="age3" class="checkboxfilter" name="age3" value="26-30">
+                        <label for="age3"> 26-30</label><br>
+                        <input type="checkbox" id="age4" class="checkboxfilter" name="age4" value="31-45">
+                        <label for="age4"> 31-45</label><br>
+                        <input type="checkbox" id="age5" class="checkboxfilter" name="age5" value="46-100">
+                        <label for="age4"> 46-100</label><br>
                     </form>
                 </div>
 
@@ -77,13 +77,13 @@
                         </button>
                 <div class="dropdown-content">
                     <form>
-                        <input type="checkbox" id="skin1" name="skin1" value="oily">
+                        <input type="checkbox" id="skin1" class="checkboxfilter" name="skin1" value="oily">
                         <label for="skin1"> oily</label><br>
-                        <input type="checkbox" id="skin2" name="skin2" value="balanced">
+                        <input type="checkbox" id="skin2" class="checkboxfilter" name="skin2" value="balanced">
                         <label for="skin2"> balanced</label><br>
-                        <input type="checkbox" id="skin3" name="skin3" value="dry">
+                        <input type="checkbox" id="skin3" class="checkboxfilter" name="skin3" value="dry">
                         <label for="skin3"> dry</label><br>
-                        <input type="checkbox" id="skin4" name="skin4" value="combination">
+                        <input type="checkbox" id="skin4" class="checkboxfilter" name="skin4" value="combination">
                         <label for="skin4"> combination</label><br>
                     </form>
                 </div>
@@ -96,13 +96,13 @@
                         </button>
                 <div class="dropdown-content">
                     <form>
-                        <input type="checkbox" id="day1" name="day1" value="every-day look">
+                        <input type="checkbox" id="day1" class="checkboxfilter" name="day1" value="daily">
                         <label for="day1"> daily</label><br>
-                        <input type="checkbox" id="day2" name="day2" value="natural">
+                        <input type="checkbox" id="day2" class="checkboxfilter" name="day2" value="fancy">
                         <label for="day2"> fancy</label><br>
-                        <input type="checkbox" id="day3" name="day3" value="fancy">
+                        <input type="checkbox" id="day3" class="checkboxfilter" name="day3" value="natural">
                         <label for="day3"> natural</label><br>
-                        <input type="checkbox" id="day4" name="day4" value="event">
+                        <input type="checkbox" id="day4" class="checkboxfilter" name="day4" value="event">
                         <label for="day4"> event</label><br>
                     </form>
                 </div>
@@ -115,37 +115,38 @@
                         </button>
                 <div class="dropdown-content">
                     <form>
-                        <input type="checkbox" id="color1" name="color1" value="earthy browns">
+                        <input type="checkbox" id="color1" class="checkboxfilter" name="color1" value="earthy browns">
                         <label for="color1"> earthy browns</label><br>
-                        <input type="checkbox" id="color2" name="color2" value="bright reds">
+                        <input type="checkbox" id="color2" class="checkboxfilter" name="color2" value="bright reds">
                         <label for="color2"> bright reds</label><br>
-                        <input type="checkbox" id="color3" name="color3" value="nature green">
+                        <input type="checkbox" id="color3" class="checkboxfilter" name="color3" value="nature green">
                         <label for="color3"> nature green</label><br>
-                        <input type="checkbox" id="color4" name="color4" value="sky blue">
+                        <input type="checkbox" id="color4" class="checkboxfilter" name="color4" value="sky blue">
                         <label for="color4"> sky blue</label><br>
-                        <input type="checkbox" id="color5" name="color5" value="unicorn pastels">
+                        <input type="checkbox" id="color5" class="checkboxfilter" name="color5" value="unicorn pastels">
                         <label for="color5"> unicorn pastels</label><br>
-                        <input type="checkbox" id="color6" name="color6" value="pink dreams">
+                        <input type="checkbox" id="color6" class="checkboxfilter" name="color6" value="pink dreams">
                         <label for="color6"> pink dreams</label><br>
                     </form>
                 </div>
             </div>
 
-            <button class="search-button" type="button" value="Search">Search</button>
+            <button onclick="filterBySearch()" class="search-button" type="button" value="Search">Filter</button>
         </div>
 
         <div class="makeup-container-parent">
-            <div class="makeup-container"  id="makeupSectionAdmin">
-                 
+            <div class="makeup-container" id="makeupSectionAdmin">
+
                 <!-- <div class="row" > -->
-                    <script src="scripts/adminMakeup.js"> </script>
+                <script src="scripts/adminMakeup.js">
+                </script>
                 <!-- </div> -->
-          
-            </div>
-        </div>   
 
             </div>
         </div>
+
+    </div>
+    </div>
     </div>
 
 </body>

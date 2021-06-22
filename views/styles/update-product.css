@@ -44,7 +44,7 @@ body {
 .add-product-info {
     width: 90%;
     display: grid;
-    grid-template-rows: 20% 20% 20% 20% 20% ;
+    grid-template-rows: 16.66% 16.66% 16.66% 16.66% 16.66% auto;
     padding-left: 5%;
     margin-bottom: 5%;
 }
