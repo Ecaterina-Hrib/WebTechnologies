@@ -27,7 +27,8 @@ li {
     margin: 0;
     padding: 0;
 }
-h5{
+
+h5 {
     margin-left: 2%;
     font-family: 'Nunito', sans-serif;
 }
@@ -176,6 +177,7 @@ body {
 
 
 /*  */
+
 .makeup-container-parent {
     background-color: #b7a0f5;
     padding: 0.5em;
@@ -236,18 +238,18 @@ body {
     align-items: center;
     grid-template-columns: 33% 33% 33%;
 }
+
 .product-list {
     margin-left: 5%;
-    position:relative;
-   
+    position: relative;
     display: grid;
     text-align: center;
     align-items: center;
     grid-template-columns: 33% 33% 33%;
 }
-h3{
-    
-}
+
+h3 {}
+
 .tag {
     border-radius: 8px;
     background-color: #D1809A;
@@ -257,6 +259,7 @@ h3{
     padding-bottom: 0.1em;
     margin: 0.1em;
 }
+
 .produs {
     border-radius: 8px;
     background-color: #D1809A;
@@ -273,11 +276,12 @@ h3{
     align-items: center;
     text-align: center;
 }
-.list{
-        display: grid;
-        grid-template-rows: 50% 50%;
-        align-items: center;
-        text-align: center;
+
+.list {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    align-items: center;
+    text-align: center;
 }
 
 .btn-update {
@@ -511,7 +515,7 @@ h3{
         margin-left: 5%;
         position: relative;
         display: grid;
-        text-align:center;
+        text-align: center;
         align-items: center;
         grid-template-columns: 50% 50%;
     }

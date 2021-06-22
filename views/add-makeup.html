@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="styles/add-makeup.css">
 </head>
 
-<body>
+<body onload=isAdminCookie()>
     <div id="nav-background">
         <div id="nav-container">
             <header id="nav-header">
@@ -20,7 +20,7 @@
                 <img src="https://i.imgur.com/xcFvxAK.png" class="hamburger-img" id="nav-menu-button">
             </header>
             <nav>
-                <ul class="nav-ul hide-ul">
+                <ul id="navv" class="nav-ul hide-ul">
                     <li><a class="nav-link" href="index.html#about">About Us</a></li>
                     <li><a class="nav-link" href="index.html#contact">Contact</a></li>
                     <li><a class="nav-link" href="makeup.html">Makeup</a></li>
@@ -72,45 +72,42 @@
 
 
     <script>
-      
         async function addingMakeup() {
-          var nameMakeup = document.getElementById("makeup-name").value;
-          var tagList = document.getElementById("makeup-tag").value;
-          var picture = document.getElementById("makeup-img").value;
-          var description = document.getElementById("makeup-desc").value;
-          var products =document.getElementById("product-link").value;
-  
-          if(nameMakeup!==""&&tagList!==""&&picture!==""&&description!==""&&products!==""){
-          var tag = tagList.split(",");
-          var product=products.split(",");
-          var data = {
-            name: nameMakeup,
-            image_path: picture,
-            url: '0',
-            descriere: description,
-            tags: tag,
-            products: product,
-          };
-  
-        
-            const response = await fetch(
-              "http://localhost:3000/api/v1/makeup/",
-              {
-                method: "POST",
-                headers: {
-                  "Content-Type": "application/json",
-                },
-                body: JSON.stringify(data),
-              }
-            );
-  
-            window.location.href = "http://localhost:3000/addedMakeup";
+            var nameMakeup = document.getElementById("makeup-name").value;
+            var tagList = document.getElementById("makeup-tag").value;
+            var picture = document.getElementById("makeup-img").value;
+            var description = document.getElementById("makeup-desc").value;
+            var products = document.getElementById("product-link").value;
+
+            if (nameMakeup !== "" && tagList !== "" && picture !== "" && description !== "" && products !== "") {
+                var tag = tagList.split(",");
+                var product = products.split(",");
+                var data = {
+                    name: nameMakeup,
+                    image_path: picture,
+                    url: '0',
+                    descriere: description,
+                    tags: tag,
+                    products: product,
+                };
+
+
+                const response = await fetch(
+                    "http://localhost:3000/api/v1/makeup/", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify(data),
+                    }
+                );
+
+                window.location.href = "http://localhost:3000/addedMakeup";
+            } else {
+                alert("All fields have to be written");
             }
-            else{
-              alert("All fields have to be written");
-             }
         }
-      </script>
+    </script>
 
 
 </body>
