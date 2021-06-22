@@ -121,7 +121,7 @@ function showMakeups(makeups) {
 
 async function populateData(callback = undefined) {
     const response = (
-            await fetch("http://localhost:3000/api/v1/makeup/", {
+            await fetch("https://ivy-sun.herokuapp.com/api/v1/makeup/", {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",

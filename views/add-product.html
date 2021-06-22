@@ -91,7 +91,7 @@
 
 
                 const response = await fetch(
-                    "http://localhost:3000/api/v1/products/", {
+                    "https://ivy-sun.herokuapp.com/api/v1/products/", {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json",
@@ -100,7 +100,7 @@
                     }
                 );
 
-                window.location.href = "http://localhost:3000/added";
+                window.location.href = "https://ivy-sun.herokuapp.com/added";
             } else {
                 alert("All fields have to be written");
             }

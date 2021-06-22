@@ -1,7 +1,7 @@
 async function preloadStuff() {
     const id = localStorage.getItem("id");
 
-    const response = (await fetch("http://localhost:3000/api/v1/makeup/", {
+    const response = (await fetch("https://ivy-sun.herokuapp.com/api/v1/makeup/", {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
@@ -39,7 +39,7 @@ async function updateStuff(){
 
   
       const response = await fetch(
-        "http://localhost:3000/api/v1/updatemakeup/",
+        "https://ivy-sun.herokuapp.com/api/v1/updatemakeup/",
         {
           method: "POST",
           headers: {
@@ -49,7 +49,7 @@ async function updateStuff(){
         }
       );
 
-    window.location.href = "http://localhost:3000/admin-makeup.html";
+    window.location.href = "https://ivy-sun.herokuapp.com/admin-makeup.html";
      
 }
 
@@ -60,7 +60,7 @@ async function deleteMakeup(){
 
   
       const response = await fetch(
-        "http://localhost:3000/api/v1/deletemakeup/",
+        "https://ivy-sun.herokuapp.com/api/v1/deletemakeup/",
         {
           method: "POST",
           headers: {
@@ -70,6 +70,6 @@ async function deleteMakeup(){
         }
       );
 
-    window.location.href = "http://localhost:3000/admin-makeup.html";
+    window.location.href = "https://ivy-sun.herokuapp.com/admin-makeup.html";
      
 }

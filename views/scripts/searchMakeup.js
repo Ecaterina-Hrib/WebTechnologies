@@ -2,7 +2,7 @@ function on(el) {
     let div = el.parentElement.children[1];
     div.style.display = "block";
     div.style.width = "100%";
-    fetch("http://localhost:3000/api/v1/counter", {
+    fetch("https://ivy-sun.herokuapp.com/api/v1/counter", {
         method: "POST",
         headers: {
             'Content-Type': 'application/json'
@@ -61,7 +61,7 @@ function htmlCallback(group_by_age_tags) {
 
 function topHTML() {
     populateData(async () => {
-        (await fetch("http://localhost:3000/api/v1/getcounts", {
+        (await fetch("https://ivy-sun.herokuapp.com/api/v1/getcounts", {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
@@ -124,7 +124,7 @@ function rssCallback(group_by_age_tags) {
 function topRSS() {
     console.log("ne intamplam si noi ?")
     populateData(async () => {
-        (await fetch("http://localhost:3000/api/v1/getcounts", {
+        (await fetch("https://ivy-sun.herokuapp.com/api/v1/getcounts", {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
@@ -168,7 +168,7 @@ function pdfCallback(group_by_age_tags) {
 function topPDF() {
     console.log("ne intamplam si noi ?")
     populateData(async () => {
-        (await fetch("http://localhost:3000/api/v1/getcounts", {
+        (await fetch("https://ivy-sun.herokuapp.com/api/v1/getcounts", {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
@@ -321,14 +321,14 @@ function showMakeups(makeups) {
 async function populateData(callback = undefined) {
 
 
-    (await fetch("http://localhost:3000/api/v1/products/", {
+    (await fetch("https://ivy-sun.herokuapp.com/api/v1/products/", {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
         }
     })).json().then(async(data) => {
         window.products = data;
-        (await fetch("http://localhost:3000/api/v1/makeup/", {
+        (await fetch("https://ivy-sun.herokuapp.com/api/v1/makeup/", {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'

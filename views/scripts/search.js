@@ -134,7 +134,7 @@ function showProducts(products) {
 
 async function populateData(callback=undefined) {
   const response = (
-    await fetch("http://localhost:3000/api/v1/products/", {
+    await fetch("https://ivy-sun.herokuapp.com/api/v1/products/", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
