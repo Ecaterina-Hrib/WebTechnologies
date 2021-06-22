@@ -9,9 +9,10 @@
     <link href="styles/makeup.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;1,200&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
 </head>
 
-<body onload=populateData()>
+<body onload="populateData() && isAdminCookie()">
     <div class="div-body">
         <div id="nav-background">
             <div id="nav-container">
@@ -22,7 +23,7 @@
                     <img src="https://i.imgur.com/xcFvxAK.png" class="hamburger-img" id="nav-menu-button">
                 </header>
                 <nav>
-                    <ul class="nav-ul hide-ul">
+                    <ul id="navv" class="nav-ul hide-ul">
                         <li><a class="nav-link" href="index.html#about">About Us</a></li>
                         <li><a class="nav-link" href="index.html#contact">Contact</a></li>
                         <li><a class="nav-link" href="makeup.html">Makeup</a></li>
@@ -39,19 +40,23 @@
                 <div class="title"> Filter </div>
 
                 <div class="subtitle">
-                    <p> <b class="susbtitle1"> Age: </b> </p>
-                    <input class="slider" type="range" min="12" max="100" value="35">
+
+                    <span>
+                        <input onchange="disableSlider()" checked type="checkbox" id="ageFilter" value="ageFilter">
+                        <label for="ageFilter"> <b id="agep" class="susbtitle1"> Age: 35</b> </p>
+                    </span>
+                    <input onchange="updateSlider(this.value)" id="megaSlider" class="slider" type="range" min="12" max="100" value="35">
                 </div>
 
                 <div class="subtitle"> <b class="susbtitle1"> Skin type: </b>
                     <form>
-                        <input type="checkbox" id="skin1" name="skin1" value="oily">
+                        <input type="checkbox" id="skin1" class="checkboxfilter" value="oily">
                         <label for="skin1"> oily</label><br>
-                        <input type="checkbox" id="skin2" name="skin2" value="balanced">
+                        <input type="checkbox" id="skin2" class="checkboxfilter" value="balanced">
                         <label for="skin2"> balanced</label><br>
-                        <input type="checkbox" id="skin3" name="skin3" value="dry">
+                        <input type="checkbox" id="skin3" class="checkboxfilter" value="dry">
                         <label for="skin3"> dry</label><br>
-                        <input type="checkbox" id="skin4" name="skin4" value="combination">
+                        <input type="checkbox" id="skin4" class="checkboxfilter" value="combination">
                         <label for="skin4"> combination</label><br>
                         <br>
                     </form>
@@ -59,44 +64,44 @@
 
                 <div class="subtitle"> <b class="susbtitle1"> Time of the day: </b>
                     <form>
-                        <input type="checkbox" id="day1" name="day1" value="every-day look">
+                        <input type="checkbox" id="day1" class="checkboxfilter" value="daily">
                         <label for="day1"> daily</label><br>
-                        <input type="checkbox" id="day2" name="day2" value="natural">
+                        <input type="checkbox" id="day2" class="checkboxfilter" value="fancy">
                         <label for="day2"> fancy</label><br>
-                        <input type="checkbox" id="day3" name="day3" value="fancy">
+                        <input type="checkbox" id="day3" class="checkboxfilter" value="natural">
                         <label for="day3"> natural</label><br>
-                        <input type="checkbox" id="day4" name="day4" value="event">
+                        <input type="checkbox" id="day4" class="checkboxfilter" value="event">
                         <label for="day4"> event</label><br><br>
                     </form>
                 </div>
 
                 <div class="subtitle"> <b class="susbtitle1"> Color palette: </b>
                     <form>
-                        <input type="checkbox" id="color1" name="color1" value="earthy browns">
+                        <input type="checkbox" id="color1" class="checkboxfilter" value="earthy browns">
                         <label for="color1"> earthy browns</label><br>
-                        <input type="checkbox" id="color2" name="color2" value="bright reds">
+                        <input type="checkbox" id="color2" class="checkboxfilter" value="bright reds">
                         <label for="color2"> bright reds</label><br>
-                        <input type="checkbox" id="color3" name="color3" value="nature green">
+                        <input type="checkbox" id="color3" class="checkboxfilter" value="nature green">
                         <label for="color3"> nature green</label><br>
-                        <input type="checkbox" id="color4" name="color4" value="sky blue">
+                        <input type="checkbox" id="color4" class="checkboxfilter" value="sky blue">
                         <label for="color4"> sky blue</label><br>
-                        <input type="checkbox" id="color5" name="color5" value="unicorn pastels">
+                        <input type="checkbox" id="color5" class="checkboxfilter" value="unicorn pastels">
                         <label for="color5"> unicorn pastels</label><br>
-                        <input type="checkbox" id="color6" name="color6" value="pink dreams">
+                        <input type="checkbox" id="color6" class="checkboxfilter" value="pink dreams">
                         <label for="color6"> pink dreams</label><br>
-                        <input type="checkbox" id="color7" name="color7" value="smokey eyes">
+                        <input type="checkbox" id="color7" class="checkboxfilter" value="smokey eyes">
                         <label for="color7"> smokey eyes</label><br>
-                        <input type="checkbox" id="color8" name="color8" value="monochrome">
+                        <input type="checkbox" id="color8" class="checkboxfilter" value="monochrome">
                         <label for="color8"> monochrome</label><br><br>
                     </form>
 
-                    <button class="button-filter" type="button" value="Filter"> Filter </button>
+                    <button onclick="filterByAnything()" class="button-filter" type="button" value="Filter"> Filter </button>
                 </div>
 
 
 
             </div>
-             <div class="right">
+            <div class="right">
                 <div class="search-section">
                     <input type="text" id="searchbar" onchange="filterByName()" class="search-input" placeholder="search by name">
                     <button class="search-button" type="button" value="Search" onclick="populateData()">All makeups</button>

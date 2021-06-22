@@ -1,3 +1,4 @@
+const { ObjectId } = require('bson');
 const mongoose = require('mongoose')
 const Schema = new mongoose.Schema({
   name: String,
@@ -5,7 +6,7 @@ const Schema = new mongoose.Schema({
   url: String,
   descriere: String,
   tags: [String],
-  products:[String],
+  products:[ObjectId],
 });
 const makeups = mongoose.model("makeups", Schema);
 module.exports = makeups;

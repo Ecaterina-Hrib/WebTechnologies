@@ -89,21 +89,6 @@ body {
     cursor: pointer;
 }
 
-.top-button {
-    height: 2em;
-    margin-left: 1em;
-    background: #CBC0D3;
-    border: none;
-    color: #000;
-    border-radius: 13px;
-    font-family: 'Nunito', sans-serif;
-    margin-top: 1%;
-}
-
-.top-button:hover {
-    background: #EFD3D7;
-    cursor: pointer;
-}
 
 .details {
     font-size: 110%;

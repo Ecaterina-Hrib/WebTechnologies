@@ -93,7 +93,7 @@
             <h2> 1. Descrierea generala a proiectului </h2>
             <p>
                 Ivy este o aplicatie web care pune la dispozitie utilizatorului o gama larga de produse si sfaturi de
-                utilizare pentru  Makeup& Products. Utilizatorii pot afla firme de produse Makeup si noi trenduri de Makeup, dar
+                utilizare pentru Skin care & Makeup. Utilizatorii pot afla firme de produse Makeup si noi trenduri, dar
                 si ce produse este recomandat sa foloseasca in functie de tenul si dorintele lor.
             </p>
             <p>
@@ -174,10 +174,9 @@
                 <h2> 2.6. Admin Page </h2>
                 <p> Admin page are mai multe functionalitati specifice administratorului aplicatiei:
                 <ul>
-                    <li> adaugarea de produse+makeups noi </li>
-                    <li> eliminarea unor produse+makeups existente </li>
-                    <li> modificarea produselor+makeups existente </li>
-                    <li> vizualizarea feedbackurilor </li>
+                    <li> adaugarea de produse noi </li>
+                    <li> eliminarea unor produse existente </li>
+                    <li> modificarea produselor existente </li>
                 </ul>
                 </p>
             </section>
@@ -193,35 +192,7 @@
 
         <section id="Back-End">
             <h2> 3. Back-End </h2>
-            <section id="responsive-page">
-            <h2> 3.1 Tehnologii folosite</h2>
-            <p> Pentru realizarea serverului de backend am folosit ca limbaj de scripting NodeJS, ca baza de date MongoDB cu suport in NodeJS cat si AJAX</p>
-         </section>
-         <section id="responsive-page">
-            <h2> 3.2 Motivatia pentru care le-am folosit</h2>
-            <p> NodeJS are suport pe o gama larga de functionalitati prin pachetele npm(node packet manager), iar pentru alegerea bazei de date, ne-am gandit ca arhitectura bazei de date ar fi mai accesibila daca am apela la o baza de date nonrelationala, si acest lucru a adus si un bonus pentru unul din criteriile bonus ale proiectului acela de  SQL Injection, iar AJAX pentru display-ul pe frontend a informatiilor prelucrate in backend. </p>
-         </section>
-         <section id="responsive-page">
-            <h2> 3.3 Conventii </h2>
-            <p> Pentru arhitectura pe fisiere si functionalitati am folosit design patternul arhitectural MVC sau sub denumirea lunga model-view-controller. am folosit in conexiunea HTTP si request manage prin REST API.</p>
-         </section>
-         <section id="responsive-page">
-            <h2> 3.4 Hosting </h2>
-            <p> Am ales sa lucram cat mai mult pe cloud deoarece sansele ca acelasi cod sa aibe rezultate diferite local sunt mari, iar pentru o testare si deveopment in paralele a anumitor functionalitati in paralel pe langa MongoDB am ales sa folosim si suportul lor de cloud Atlas unde am creat clusterul pentru baza de date, si am adugat colectii si documente noi in functiile de entitatile din proiect. </p>
-            <p>Am folsit imgur pentru hostarea imaginilior prezente in proiect.</p>
-            <p> Iar pentru ca initial gandisem ca imaginile si baza de date sa fie in cloud pentru prevenirea unor erori si piedici nedorite, am incercat si sa facem pasul catre urcarea intregului proiect .</p>
-                <p>In deployment am folosit Docker si Heroku, am creat un container pe Docker, cu imaginea proiectului si specificatiile, iar in Heroku am pasat containerul creat in Docker si am legat de branch-ul principal din repository-ul proiectului astfel incat orice modificare facuta dupa deploy sa consiste si in buidlul de Heroku.</p>
-        </section>
-        <section id="responsive-page">
-            <h2> 3.5 Functionalitati si structura </h2>
-            <p> Proiectul are 4 entitati prima fiind cea de user, a doua makeups, a treia products, iar a patra feedback area.</p>
-            <p>Site-ul trebuie sa ofere sfaturi legate de frumusete si machiaje in functie de diferite tipuri de filtrare, varsta, culoare, tip de piele etc.  </p>
-            <p>Register cu cookie si token</p>
-            <p>Makeups  si display de produse in functie de preferinta impreuna cu sfaturi</p>
-            <p>Filter si display in diferite formate(HTML, PDF, RSS) in functie de numarul de clickuri ale utilizatorului.</p>
-            <p>Admin pentru manage de produse si makeups, cat si de vizualizare a feedbackurilor</p>
-            <p>CRUD operations pe makeups si products</p>
-        </section>
+            <p> TBD </p>
         </section>
 
         <section id="Etape-dezv">
@@ -231,33 +202,28 @@
                 <p> Tema aleasa a fost pastel colors pentru a atrage cat mai multe persoane interesate de makeup prin aspectul aplicatiei.</p>
             </section>
             <section id="etapa2">
-                <h5> A doua etapa de dezvoltare a constat in realizarea front-end-ului aplicatiei cat si paginile utilizate. </h5>
-            </section>
-            <section id="etapa3">
-                <h5>A treia etapa a fost hotarararea arhitecturii, si a limbajului folosit cat si structura bazei de date.</h5>
-            </section>
-            <section id="etapa4">
-                <h5>A patra etapa a fost dezvoltarea proiectului.</h5>
-            </section>
-            <section id="etapa5">
-                <h5>Etapa 5 a fost hostarea.</h5>
-            </section>
-            <section id="etapa6">
-                
+                <h5> A doua etapa de dezvoltare a constat in realizarea front-end-ului aplicatiei. </h5>
                 <p> Contributiile autorilor au fost: </p>
                 <ul>
-                    <h1> Coteanu Andra: </h1> <li>Makeup: a search page + filters that suggest makeup based on prefferences</li>
-                <li> Products: a search page + filters that shows the products suggested in more detail,</li>
-            <li>Admin home page: the page for admins that will redirect them to ohter admin pages </li>
-                     <h1>Hrib Ecaterina: </h1> <li>Landing page: home, about us, contact,</li>
-                <li>  Makeup+products: sort + top,</li>
-            <li> Account: see your account details and edit them,</li>
-        <li>  Admin feedback: here the admin will see the messages the users left in the contact area  </li>
-                   <h1> Marele Carina: </h1> <li>Login / Register (as the name suggest, or if you are already logged, this will be the logout button),</li>
-                    <li>  Admin products: see, edit, delete or add new products by admin</li>
-                    <li>  Admin makeup: see, edit, delete or add new makeup by admin</li>
-                    </li>
+                    <li> Coteanu Andra: paginile "Search", "Add-product page" si "Update-product page" (in cadrul "Admin
+                        page") si realizarea documentatiei in formatul Scholarly HTML</li>
+                    <li> Hrib Ecaterina: paginile "Home" (home, about us, contact), bara de navigare, subsolul paginii
+                        si realizarea textului pentru documentatie.</li>
+                    <li> Marele Carina: paginile "Login / Sign-up", "My Account", "Admin page" si realizarea textului
+                        pentru documentatie.</li>
                 </ul>
+            </section>
+            <section id="etapa3">
+                TBA
+            </section>
+            <section id="etapa4">
+                TBA
+            </section>
+            <section id="etapa5">
+                TBA
+            </section>
+            <section id="etapa6">
+                TBA
             </section>
 
         </section>

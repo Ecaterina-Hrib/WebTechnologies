@@ -16,7 +16,7 @@ class WebApp {
       app.router.route(req, res)
     //  res.end()
     })
-    server.listen(process.env.PORT||port)
+    server.listen(port)
     console.log(`app running on PORT: ${port}`)
   }
 }
